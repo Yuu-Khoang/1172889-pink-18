@@ -100,12 +100,35 @@
               <p class="tariffs-plan__price">3,99 USD</p>
             </div>
             <ul class="tariffs-option__list">
-              <li class="tariffs-option__item">Розовый фильтр</li>
-              <li class="tariffs-option__item">Смайлики</li>
-              <li class="tariffs-option__item">Комментарии</li>
+              <li class="tariffs-option__item tariffs-plan__option--accept">Розовый фильтр</li>
+              <li class="tariffs-option__item tariffs-plan__option--accept">Смайлики</li>
+              <li class="tariffs-option__item tariffs-plan__option--decline">Комментарии</li>
             </ul>
           </li>
         </ul>
+
+        <table class="tariffs__list slider__list">
+          <thead class="visually-hidden">
+            <tr class="tariffs__item">
+              <th class="tariffs-plan__name">Название тарифа</th>
+              <th class="tariffs-plan__price">Стоимость</th>
+              <th class="tariffs-plan__option">Розовый фильтр</th>
+              <th class="tariffs-plan__option">Смайлики</th>
+              <th class="tariffs-plan__option">Комментарии</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tariffs__item">
+              <td class="tariffs-plan__name">Стандарт</td>
+              <td class="tariffs-plan__price">3,99 USD</td>
+              <td class="tariffs-plan__option tariffs-plan__option--accept">Да</td>
+              <td class="tariffs-plan__option tariffs-plan__option--accept">Да</td>
+              <td class="tariffs-plan__option tariffs-plan__option--decline">Нет</td>
+            </tr>
+          </tbody>
+        </table>
+
+
         <button class="slider__toggle" type="button">1</button>
         <button class="slider__toggle" type="button">2</button>
         <button class="slider__toggle" type="button">3</button>
