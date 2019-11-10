@@ -3,10 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Фотоприложение Pink</title>
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
-    rel="stylesheet">
+  <title>Конкурс фотоприложения Pink</title>
 </head>
 
 
@@ -17,49 +14,51 @@
     </a>
 
     <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Показать меню</button>
-      <button class="main-nav__toggle" type="button">Скрыть меню</button>
+      <button class="main-nav__toggle" type="button">Меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a href="#nowhere">Главная</a>
+          <li class="site-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item">
+            <a href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item site-list__item--active">
-            <a href="#nowhere">Фотографии</a>
+            <a>Конкурс</a>
           </li>
-          <li class="site-list__item site-list__item--active">
-            <a href="#nowhere">Конкурс</a>
-          </li>
-          <li class="site-list__item site-list__item--active">
-            <a href="#nowhere">Html academy</a>
+          <li class="site-list__item">
+            <a href="https://htmlacademy.ru/">Html academy</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
 
-  <main class="form">
+  <main class="banner">
+    <h1 class="banner__slogan banner__slogan--competition">Конкурс на самое безмашенное путешествие с Пинк</h1>
+
+    <p class="form__header">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!</p>
   </main>
 
   <footer class="page-footer">
-    <a class="page-footer__logo">
+    <a href="index.html" class="page-footer__logo">
       <img class="page-footer__logo-image" src="img/logo.png" alt="Логотип приложения Pink" width="147" height="40">
     </a>
 
     <div class="socials">
       <ul class="socials-list">
         <li class="socials-item">
-          <a href="https://vk.com/" class="socials-item__link icon-vk">
+          <a href="https://vk.com/" class="socials-item__link--vk">
             <span class="visually-hidden">Страница Pink ВКонтакте</span>
           </a>
         </li>
-        <li class="socials__item">
-          <a href="https://facebook.com/‎"  class="socials-item__link icon-fb">
+        <li class="socials-item">
+          <a href="https://facebook.com/‎" class="socials-item__link--fb">
             <span class="visually-hidden">Страница Pink Фейсбук</span>
           </a>
         </li>
-        <li class="socials__item">
-          <a href="https://instagram.com/"  class="socials-item__link icon-inst">
+        <li class="socials-item">
+          <a href="https://instagram.com/" class="socials-item__link--inst">
             <span class="visually-hidden">Страница Pink Инстаграм</span>
           </a>
         </li>
@@ -68,7 +67,7 @@
 
     <div class="page-footer__developer">
       <p>Разработано
-        <a href="https://htmlacademy.ru/intensive/adaptive"> <span class="visually-hidden">htmlacademy.ru</span></a>
+        <a href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">htmlacademy.ru</span></a>
       </p>
     </div>
   </footer>
