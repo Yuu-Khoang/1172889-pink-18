@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Юлия](https://up.htmlacademy.ru/adaptive/18/user/1172889).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Зубов](https://htmlacademy.ru/profile/serj).
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
