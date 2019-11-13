@@ -2,7 +2,6 @@
 
 * Студент: [Юлия](https://up.htmlacademy.ru/adaptive/18/user/1172889).
 * Наставник: [Сергей Зубов](https://htmlacademy.ru/profile/serj).
-
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**

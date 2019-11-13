@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Конкурс фотоприложения Pink</title>
+</head>
+
+
+<body>
+  <header class="header">
+    <a href="index.html" class="header__link">
+      <img class="header__logo" src="img/logo.png" alt="Логотип приложения Pink" width="75" height="22">
+    </a>
+
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">Меню</button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="photo.html">Фотографии</a>
+          </li>
+          <li class="main-nav__item main-nav__item--active">
+            <a>Конкурс</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="https://htmlacademy.ru/">Html academy</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="banner">
+    <h1 class="banner__slogan banner__slogan--competition">Конкурс на самое безбашенное путешествие с Пинк</h1>
+
+    <section class="form">
+      <p class="form__header">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу
+        бонусную карту!</p>
+
+      <div class="form-fullname">
+        <p class="form-fullname__surname">
+          <label for="surname">Фамилия:</label>
+          <input type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
+        </p>
+        <p class="form-fullname__name">
+          <label for="name">Имя:</label>
+          <input type="text" name="username" id="name" placeholder="Введите ваше имя*" required>
+        </p>
+        <p class="form-fullname__middlename">
+          <label for="middlename">Отчество:</label>
+          <input type="text" name="middlename" id="middlename" placeholder="Ну и отчество тоже">
+        </p>
+      </div>
+      <div class="form-achievements">
+        <p class="form-achievements__header">Ваши безбашенные достижения в путешествии</p>
+        <ul class="form-achievements__list">
+          <li class="form-achievements__item">
+            <input class="form-achievements__checkbox form-achievements__checkbox--checked" type="checkbox" name="achievements" id="selfi-shark"
+              value="selfi-shark" checked>
+            <label for="selfi-shark">Сделал селфи с акулой</label>
+          </li>
+          <li class="form-achievements__item">
+            <input class="form-achievements__checkbox form-achievements__checkbox--checked" type="checkbox" name="achievements" id="sunburned"
+              value="sunburned-beach" checked>
+            <label for="sunburned">Обгорел на пляже</label>
+          </li>
+          <li class="form-achievements__item">
+            <input class="form-achievements__checkbox" type="checkbox" name="achievements" id="norris"
+              value="saw-norris">
+            <label for="norris">Видел Чака Норриса</label>
+          </li>
+          <li class="form-achievements__item">
+            <input class="form-achievements__checkbox" type="checkbox" name="achievements" id="souvenirs"
+              value="bought-souvenirs">
+            <label for="souvenirs">Накупил сувениров</label>
+          </li>
+          <li class="form-achievements__item">
+            <input class="form-achievements__checkbox form-achievements__checkbox--checked" type="checkbox" name="achievements" id="tower"
+              value="held-tower" checked>
+            <label for="tower">Удержал башню</label>
+          </li>
+          <li class="form-achievements__item">
+            <input class="form-achievements__checkbox" type="checkbox" name="achievements" id="hotel"
+              value="destroyed-hotel">
+            <label for="hotel">Разгромил отель</label>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+      <a href="index.html" class="footer__link">
+        <img class="footer__logo" src="img/logo.png" alt="Логотип приложения Pink" width="147" height="40">
+      </a>
+
+    <div class="socials">
+      <ul class="socials__list">
+        <li class="socials__item">
+          <a href="https://vk.com/" class="socials__link socials__link--vk">
+            <span class="visually-hidden">Страница Pink ВКонтакте</span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="https://facebook.com/" class="socials__link socials__link--fb">
+            <span class="visually-hidden">Страница Pink Фейсбук</span>
+          </a>
+        </li>
+        <li class="socials__item">
+          <a href="https://instagram.com/" class="socials__link socials__link--inst">
+            <span class="visually-hidden">Страница Pink Инстаграм</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <p class="footer__developer">Разработано
+      <a href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">htmlacademy.ru</span></a>
+    </p>
+  </footer>
+
+</body>
+
+</html>
