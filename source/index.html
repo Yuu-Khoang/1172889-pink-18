@@ -8,25 +8,25 @@
 
 
 <body>
-  <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logo.png" alt="Логотип приложения Pink" width="75" height="22">
+  <header class="header">
+    <a class="header__link">
+      <img class="header__logo" src="img/logo.png" alt="Логотип приложения Pink" width="75" height="22">
     </a>
 
     <nav class="main-nav">
       <button class="main-nav__toggle" type="button">Меню</button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item--active">
+        <ul class="main-nav__list">
+          <li class="main-nav__item--active">
             <a>Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="photo.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="competition.html">Конкурс</a>
           </li>
-          <li class="site-list__item">
+          <li class="main-nav__item">
             <a href="https://htmlacademy.ru/">Html academy</a>
           </li>
         </ul>
@@ -34,13 +34,10 @@
     </nav>
   </header>
 
-  <main class="page-main">
+  <main class="banner">
     <h1 class="visually-hidden">Pink - фотоприложение для раскрашивания серых будней</h1>
-
-    <section class="banner">
-      <h2 class="banner__slogan banner__slogan--main">Взгляните на жизнь иначе!</h2>
-      <img class="banner__image" src="#" alt="Телефон с фотографией из приложения Pink" width="0" height="0">
-    </section>
+    <h2 class="banner__slogan banner__slogan--main">Взгляните на жизнь иначе!</h2>
+    <img class="banner__overlay" src="#" alt="Телефон с фотографией из приложения Pink" width="0" height="0">
 
     <section class="system">
       <button class="system__button">Скачать приложение</button>
@@ -117,15 +114,15 @@
 
     <section class="page-contacts">
       <h2 class="page-contacts__header">Остались вопросы? Свяжитесь с нами!</h2>
-      <div class="page-contacts__item">
+      <div class="page-contacts__phone">
         <p>Звоните</p>
         <span><a href="tel:+78125556666">+7 (812) 555-66-66</a></span>
       </div>
-      <div class="page-contacts__item">
-          <p>Пишите</p>
-          <p><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+      <div class="page-contacts__email">
+        <p>Пишите</p>
+        <p><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
       </div>
-      <div class="page-contacts__item">
+      <div class="page-contacts__address">
         <p>Приезжайте в гости</p>
         <address>ул. Большая Конюшенная, 19/8</address>
       </div>
