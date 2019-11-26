@@ -1,0 +1,59 @@
+.form {
+  line-height: 30px;
+  color: @color-subtext;
+
+  &__header {
+    font-size: 14px;
+  }
+
+  &__fullname,
+  &__contacts,
+  &__text {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: @color-contrast;
+  }
+
+  &__fullname input {
+    color: @white;
+  }
+
+  &__wrapper {
+    background-color: @bg-light;
+  }
+
+  &__title {
+    line-height: 18px;
+    text-transform: uppercase;
+    color: @color-contrast;
+  }
+
+  &__achievements,
+  &__statistics {
+    font-size: 18px;
+    list-style-type: none;
+  }
+
+  &__text textarea {
+    font-size: 18px;
+  }
+
+  &__button {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px #2aab6d solid;
+    border-radius: 2px;
+    background-color: #2aab6d;
+    color: @white;
+  }
+
+  &__footnote {
+    font-size: 14px;
+    text-transform: uppercase;
+
+    &--contrast {
+      color: @color-contrast;
+    }
+  }
+}
