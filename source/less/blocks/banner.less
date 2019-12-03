@@ -1,6 +1,21 @@
 .banner__slogan {
+  width: 225px;
+  margin: 0 auto;
   font-size: 24px;
   font-weight: 300;
   line-height: auto;
+  text-align: center;
   color: @white;
+}
+
+@media (min-width: @tablet-width) {
+  .banner__slogan {
+    width: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner__slogan {
+    width: 600px;
+  }
 }

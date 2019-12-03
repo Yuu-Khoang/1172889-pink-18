@@ -1,5 +1,12 @@
 .reviews__wrapper {
+  padding: 20px;
   background-color: @bg-base;
+}
+
+.reviews__item {
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .reviews__user {
@@ -14,4 +21,43 @@
   font-size: 14px;
   line-height: 30px;
   color: @color-subtext;
+}
+
+.reviews__other {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__item {
+    width: 620px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .reviews__user {
+    font-size: 20px;
+  }
+
+  .reviews__other {
+    display: block;
+    font-size: 14px;
+    color: @color-subtext;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews__item::after {
+    width: 79px;
+    height: 64px;
+    display: flex;
+    align-self: center;
+    padding-right: 0px;
+    background: url("../img/icon-quotes.svg") no-repeat;
+    opacity: 0.1;
+    content: "";
+  }
 }

@@ -1,0 +1,66 @@
+.fact {
+  display: none;
+}
+
+.fact__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  color: @color-text;
+}
+
+@media (min-width: @tablet-width) {
+  .fact {
+    width: 630px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .fact__title {
+    width: 200px;
+  }
+
+  .fact__description {
+    width: 300px;
+    font-size: 14px;
+    line-height: 24px;
+    color: @color-subtext;
+  }
+
+  .fact__link {
+    font-size: 14px;
+    line-height: 24px;
+
+    a {
+      color: @color-contrast;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .fact {
+    width: 900px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .fact__title {
+    width: 500px;
+  }
+
+  .fact__description {
+    width: 520px;
+    font-size: 18px;
+    line-height: 30px;
+    color: @color-subtext;
+  }
+
+  .fact__link {
+    font-size: 18px;
+    line-height: 30px;
+
+    a {
+      color: @color-contrast;
+    }
+  }
+}

@@ -1,19 +1,31 @@
 .tariffs__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
   background-color: @bg-light;
+  border-collapse: collapse;
 }
 
 .tariffs__list {
+  padding: 0;
   list-style-type: none;
 }
 
 .tariffs__title {
+  width: 276px;
+  height: 94px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 10px;
   background-color: @bg-dark;
+  border-top: @color-subtext 2px solid;
+  border-bottom: @color-subtext 2px solid;
 }
 
 .tariffs__name {
   font-size: 18px;
   font-weight: 700;
-  line-height: 30px;
   text-transform: uppercase;
   color: @white;
 }
@@ -21,15 +33,23 @@
 .tariffs__price {
   font-size: 24px;
   font-weight: 300;
-  line-height: 30px;
   text-transform: uppercase;
   color: @white;
 }
 
 .tariffs__option {
+  padding: 0;
   font-size: 14px;
   line-height: 30px;
   text-transform: uppercase;
   list-style-type: none;
   color: @color-subtext;
+  background-color: @white;
+}
+
+.tariffs__attribute {
+  width: 275px;
+  display: flex;
+  justify-content: space-around;
+  border: #e5e5e5 2px solid;
 }

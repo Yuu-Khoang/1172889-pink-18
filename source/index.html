@@ -36,9 +36,10 @@
   </header>
 
   <main class="banner">
+    <img class="banner__background" src="#" alt="Темный фон для приложения с улицей и домом с колоннами" width="320" height="462">
     <h1 class="visually-hidden">Pink - фотоприложение для раскрашивания серых будней</h1>
     <h2 class="banner__slogan banner__slogan--main">Взгляните на жизнь иначе!</h2>
-    <img class="banner__overlay" src="#" alt="Телефон с фотографией из приложения Pink" width="0" height="0">
+    <img class="banner__overlay" src="#" alt="Телефон с фотографией из приложения Pink" width="258" height="286">
 
     <section class="system">
       <button class="system__button">Скачать приложение</button>
@@ -51,7 +52,9 @@
     </section>
 
     <section class="advantages">
-      <h2 class="advantages__header"><span>Устали от серости мегаполиса? Нам есть, что вам предложить!</span></h2>
+      <h2 class="advantages__header">
+        <p>Устали от&nbsp;серости мегаполиса?</p>
+        <p>Нам есть, что&nbsp;вам предложить!</p></h2>
       <ul class="advantages__list">
         <li class="advantages__item">
           <h3 class="advantages__title">Поднимает настроение</h3>
@@ -72,11 +75,19 @@
       <img src="#" alt="Экран приветствия приложения Pink" width="0" height="0">
     </section>
 
+    <section class="fact">
+      <img class="fact__photo" src="#" alt="Фото часов с надписью 24 часа" width="238" height="276">
+      <p class="fact__title">Эффект на&nbsp;24 часа!</p>
+      <p class="fact__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+      <p class="fact__link"><a href="#">Узнать больше об исследовании</a></p>
+    </section>
+
     <section class="reviews">
       <h2 class="visually-hidden">Отзывы о нас</h2>
       <div class="reviews__wrapper">
         <blockquote class="reviews__item">
           <cite class="reviews__user">Николай Петров</cite>
+          <p class="reviews__other">25 лет, водитель трамвая</p>
           <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
             серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         </blockquote>
@@ -92,49 +103,74 @@
     <section class="tariffs">
       <h2 class="visually-hidden">Тарифные планы</h2>
       <div class="tariffs__wrapper">
-        <ul class="tariffs__list">
+        <ul class="tariffs__list tariffs__list--base">
           <li class="tariffs__item">
             <div class="tariffs__title">
-              <h3 class="tariffs__name">Стандарт</h3>
-              <p class="tariffs__price">3,99 USD</p>
+              <h3 class="tariffs__name">База</h3>
+              <p class="tariffs__price">1,99 USD</p>
             </div>
             <ul class="tariffs__option">
               <li class="tariffs__attribute tariffs__attribute--accept">Розовый фильтр</li>
-              <li class="tariffs__attribute tariffs__attribute--accept">Смайлики</li>
+              <li class="tariffs__attribute tariffs__attribute--decline">Смайлики</li>
               <li class="tariffs__attribute tariffs__attribute--decline">Комментарии</li>
             </ul>
           </li>
         </ul>
-        <div class="slider">
+        <ul class="tariffs__list">
+            <li class="tariffs__item">
+              <div class="tariffs__title tariffs__list--standart">
+                <h3 class="tariffs__name">Стандарт</h3>
+                <p class="tariffs__price">3,99 USD</p>
+              </div>
+              <ul class="tariffs__option">
+                <li class="tariffs__attribute tariffs__attribute--accept">Розовый фильтр</li>
+                <li class="tariffs__attribute tariffs__attribute--accept">Смайлики</li>
+                <li class="tariffs__attribute tariffs__attribute--decline">Комментарии</li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="tariffs__list  tariffs__list--unlim">
+              <li class="tariffs__item">
+                <div class="tariffs__title">
+                  <h3 class="tariffs__name">Анлим</h3>
+                  <p class="tariffs__price">9,99 USD</p>
+                </div>
+                <ul class="tariffs__option">
+                  <li class="tariffs__attribute tariffs__attribute--accept">Розовый фильтр</li>
+                  <li class="tariffs__attribute tariffs__attribute--accept">Смайлики</li>
+                  <li class="tariffs__attribute tariffs__attribute--accept">Комментарии</li>
+                </ul>
+              </li>
+            </ul>
+      </div>
+          <div class="slider">
           <button class="slider__toggle" type="button">1</button>
           <button class="slider__toggle" type="button">2</button>
           <button class="slider__toggle" type="button">3</button>
         </div>
-      </div>
     </section>
 
     <section class="contacts">
-      <h2 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h2>
+      <h2 class="contacts__header">Остались вопросы? Свяжитесь&nbsp;с&nbsp;нами!</h2>
       <div class="contacts__block">
-        <p class="contacts__item">Звоните</p>
+        <p class="contacts__item">Звоните:</p>
         <span><a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a></span>
       </div>
-      <div class="ccontacts__block">
-        <p class="contacts__item">Пишите</p>
-        <p><a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+      <div class="ccontacts__block contacts__block--email">
+        <p class="contacts__item">Пишите:</p>
+        <span><a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></span>
       </div>
       <div class="contacts__block">
-        <p class="contacts__item">Приезжайте в гости</p>
+        <p class="contacts__item">Приезжайте в гости:</p>
         <address class="contacts__link">ул. Большая Конюшенная, 19/8</address>
       </div>
-
+    </section>
       <div class="bigmap">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858716668347!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573337163189!5m2!1sru!2sru"
           width="600" height="450" frameborder="0" allowfullscreen=""></iframe>
         <img src="#" width="0" height="0" alt="Адрес офиса: Большая Конюшенная, 19/8">
       </div>
-    </section>
   </main>
 
 </body>
