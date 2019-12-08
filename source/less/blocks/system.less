@@ -22,7 +22,7 @@
 
 .system__description {
   width: 229px;
-  margin: 0 auto;
+  margin: 10px auto;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
@@ -34,6 +34,49 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
+  margin: 0 auto;
   padding: 0;
   list-style-type: none;
+}
+
+.system__apple {
+  width: 46px;
+  height: 57px;
+  background: url("../img/logo-apple.svg") no-repeat;
+  content: "";
+}
+
+.system__android {
+  width: 46px;
+  height: 57px;
+  background: url("../img/logo-android.svg") no-repeat;
+  content: "";
+}
+
+.system__windows {
+  width: 46px;
+  height: 57px;
+  background: url("../img/logo-microsoft.svg") no-repeat;
+  content: "";
+}
+
+@media (min-width: @tablet-width) {
+  .system {
+    height: 462px;
+    z-index: 1;
+    position: absolute;
+    margin-top: -300px;
+    background-color: inherit;
+  }
+
+  .system__button {
+    background-color: inherit;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header__logo {
+    order: 2;
+    height: 40px;
+  }
 }

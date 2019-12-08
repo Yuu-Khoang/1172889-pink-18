@@ -1,4 +1,5 @@
 .reviews__wrapper {
+  z-index: 1;
   padding: 20px;
   background-color: @bg-base;
 }
@@ -24,6 +25,10 @@
 }
 
 .reviews__other {
+  display: none;
+}
+
+.reviews__toggle {
   display: none;
 }
 
@@ -59,5 +64,47 @@
     background: url("../img/icon-quotes.svg") no-repeat;
     opacity: 0.1;
     content: "";
+  }
+
+  .reviews__scrolling {
+    width: 940px;
+    margin: 200px auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reviews__toggle {
+    display: block;
+
+    &--prev {
+      width: 22px;
+      height: 41px;
+      display: flex;
+      align-self: center;
+      padding-right: 0px;
+      background: url("../img/icon-review-arrow-left.svg") no-repeat;
+      opacity: 0.3;
+      content: "";
+      border: none;
+    }
+
+    &--next {
+      width: 22px;
+      height: 41px;
+      display: flex;
+      align-self: center;
+      padding-right: 0px;
+      background: url("../img/icon-review-arrow-right.svg") no-repeat;
+      opacity: 0.3;
+      content: "";
+      border: none;
+    }
+  }
+
+  .reviews__wrapper {
+    margin-top: -360px;
   }
 }

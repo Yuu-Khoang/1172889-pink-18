@@ -11,7 +11,9 @@
 <body>
   <header class="header">
     <a class="header__link">
-      <img class="header__logo" src="img/logo.png" alt="Логотип приложения Pink" width="75" height="22">
+      <picture>
+        <img class="header__logo" src="../img/logo-pink-white-mobile.svg" alt="Логотип приложения Pink" width="75" height="22">
+      </picture>
     </a>
 
     <nav class="main-nav">
@@ -36,17 +38,19 @@
   </header>
 
   <main class="banner">
-    <img class="banner__background" src="#" alt="Темный фон для приложения с улицей и домом с колоннами" width="320" height="462">
+    <img class="banner__background" src="../img/bg-back-mobile@1x.jpg"
+      alt="Темный фон для приложения с улицей и домом с колоннами" width="320" height="462">
     <h1 class="visually-hidden">Pink - фотоприложение для раскрашивания серых будней</h1>
     <h2 class="banner__slogan banner__slogan--main">Взгляните на жизнь иначе!</h2>
-    <img class="banner__overlay" src="#" alt="Телефон с фотографией из приложения Pink" width="258" height="286">
+    <img class="banner__overlay" src="../img/iphone-hand-mobile@1x.png" alt="Телефон с фотографией из приложения Pink"
+      width="258" height="286">
 
     <section class="system">
       <button class="system__button">Скачать приложение</button>
       <ul class="system__list">
-        <li>Apple</li>
-        <li>Android</li>
-        <li>Windows Phone</li>
+        <li class="system__apple"><span class="visually-hidden">Apple</span></li>
+        <li class="system__android"><span class="visually-hidden">Android</span></li>
+        <li class="system__windows"><span class="visually-hidden">Windows Phone</span></li>
       </ul>
       <p class="system__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
     </section>
@@ -54,36 +58,46 @@
     <section class="advantages">
       <h2 class="advantages__header">
         <p>Устали от&nbsp;серости мегаполиса?</p>
-        <p>Нам есть, что&nbsp;вам предложить!</p></h2>
+        <p>Нам есть, что&nbsp;вам предложить!</p>
+      </h2>
       <ul class="advantages__list">
         <li class="advantages__item">
           <h3 class="advantages__title">Поднимает настроение</h3>
           <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в
             несколько кликов!</p>
+          <img class="advantages__image advantages__image--first" src="../img/iphone-screen-1-desktop@1x.png" alt="Фотография мусорных баков в серых тонах" width="292" height="302">
         </li>
         <li class="advantages__item">
           <h3 class="advantages__title">Меняет мир вокруг</h3>
           <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
             усилить эффект</p>
+          <img class="advantages__image advantages__image--second" src="../img/iphone-screen-2-desktop@1x.png" alt="Фотография мусорных баков с розовым фильтром" width="292" height="302">
         </li>
         <li class="advantages__item">
           <h3 class="advantages__title">Заводит новых друзей</h3>
           <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите
             новых</p>
+          <img class="advantages__image advantages__image--third" src="../img/iphone-screen-mobile@1x.png" alt="Смайлик в приложении Pink на фоне яркой розовой фотографии" width="157" height="320">
         </li>
       </ul>
-      <img src="#" alt="Экран приветствия приложения Pink" width="0" height="0">
+
     </section>
 
-    <section class="fact">
-      <img class="fact__photo" src="#" alt="Фото часов с надписью 24 часа" width="238" height="276">
+    <section class="fact fact__icon">
+      <div class="fact__wrapper">
       <p class="fact__title">Эффект на&nbsp;24 часа!</p>
-      <p class="fact__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+      <p class="fact__description">Британские ученые провели исследования и доказали, что положительный эффект от
+        использования приложения длится целые сутки!</p>
       <p class="fact__link"><a href="#">Узнать больше об исследовании</a></p>
+      </div>
     </section>
 
     <section class="reviews">
       <h2 class="visually-hidden">Отзывы о нас</h2>
+        <div class="reviews__scrolling">
+        <button class="reviews__toggle reviews__toggle--prev"></button>
+        <button class="reviews__toggle reviews__toggle--next"></button>
+        </div>
       <div class="reviews__wrapper">
         <blockquote class="reviews__item">
           <cite class="reviews__user">Николай Петров</cite>
@@ -91,13 +105,14 @@
           <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
             серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
         </blockquote>
+      </div>
 
         <div class="slider">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
+          <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">1</span></button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">2</span></button>
+          <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
         </div>
-      </div>
+
     </section>
 
     <section class="tariffs">
@@ -117,37 +132,37 @@
           </li>
         </ul>
         <ul class="tariffs__list">
-            <li class="tariffs__item">
-              <div class="tariffs__title tariffs__list--standart">
-                <h3 class="tariffs__name">Стандарт</h3>
-                <p class="tariffs__price">3,99 USD</p>
-              </div>
-              <ul class="tariffs__option">
-                <li class="tariffs__attribute tariffs__attribute--accept">Розовый фильтр</li>
-                <li class="tariffs__attribute tariffs__attribute--accept">Смайлики</li>
-                <li class="tariffs__attribute tariffs__attribute--decline">Комментарии</li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="tariffs__list  tariffs__list--unlim">
-              <li class="tariffs__item">
-                <div class="tariffs__title">
-                  <h3 class="tariffs__name">Анлим</h3>
-                  <p class="tariffs__price">9,99 USD</p>
-                </div>
-                <ul class="tariffs__option">
-                  <li class="tariffs__attribute tariffs__attribute--accept">Розовый фильтр</li>
-                  <li class="tariffs__attribute tariffs__attribute--accept">Смайлики</li>
-                  <li class="tariffs__attribute tariffs__attribute--accept">Комментарии</li>
-                </ul>
-              </li>
+          <li class="tariffs__item">
+            <div class="tariffs__title tariffs__list--standart">
+              <h3 class="tariffs__name">Стандарт</h3>
+              <p class="tariffs__price">3,99 USD</p>
+            </div>
+            <ul class="tariffs__option">
+              <li class="tariffs__attribute tariffs__attribute--accept">Розовый фильтр</li>
+              <li class="tariffs__attribute tariffs__attribute--accept">Смайлики</li>
+              <li class="tariffs__attribute tariffs__attribute--decline">Комментарии</li>
             </ul>
+          </li>
+        </ul>
+        <ul class="tariffs__list  tariffs__list--unlim">
+          <li class="tariffs__item">
+            <div class="tariffs__title">
+              <h3 class="tariffs__name">Анлим</h3>
+              <p class="tariffs__price">9,99 USD</p>
+            </div>
+            <ul class="tariffs__option">
+              <li class="tariffs__attribute tariffs__attribute--accept">Розовый фильтр</li>
+              <li class="tariffs__attribute tariffs__attribute--accept">Смайлики</li>
+              <li class="tariffs__attribute tariffs__attribute--accept">Комментарии</li>
+            </ul>
+          </li>
+        </ul>
       </div>
-          <div class="slider">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
-        </div>
+      <div class="slider">
+        <button class="slider__toggle" type="button"><span class="visually-hidden">1</span></button>
+        <button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">2</span></button>
+        <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
+      </div>
     </section>
 
     <section class="contacts">
@@ -165,13 +180,39 @@
         <address class="contacts__link">ул. Большая Конюшенная, 19/8</address>
       </div>
     </section>
-      <div class="bigmap">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.320858716668347!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573337163189!5m2!1sru!2sru"
-          width="600" height="450" frameborder="0" allowfullscreen=""></iframe>
-        <img src="#" width="0" height="0" alt="Адрес офиса: Большая Конюшенная, 19/8">
-      </div>
+
+      <img src="../img/bg-map-mobile@1x.png" width="320" height="645" alt="Адрес офиса: Большая Конюшенная, 19/8">
   </main>
+
+  <footer class="footer footer--index">
+      <a class="footer__link">
+        <img class="footer__logo" src="../img/logo-pink-blue-mobile.svg" alt="Логотип приложения Pink" width="147" height="40">
+      </a>
+
+      <div class="footer__public">
+        <ul class="footer__socials">
+          <li class="footer__account">
+            <a href="https://vk.com/" class="footer__link footer__link--twitter">
+              <span class="visually-hidden">Страница Pink в Твиттере</span>
+            </a>
+          </li>
+          <li class="footer__account">
+            <a href="https://facebook.com/" class="footer__link footer__link--fb">
+              <span class="visually-hidden">Страница Pink в Фейсбуке</span>
+            </a>
+          </li>
+          <li class="footer__account">
+            <a href="https://instagram.com/" class="footer__link footer__link--youtube">
+              <span class="visually-hidden">Страница Pink на Ютубе</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <p class="footer__developer">Разработано
+        <a href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">htmlacademy.ru</span></a>
+      </p>
+    </footer>
 
 </body>
 
