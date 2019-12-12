@@ -1,21 +1,21 @@
 .main-nav {
   width: 320px;
-  margin: 0 auto;
   display: flex;
   flex-direction: row;
   font-size: 18px;
-  line-height: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: center;
+  text-transform: uppercase;
   background-color: @bg-dark;
-  opacity: 1;
 }
 
 .main-nav__item {
-  min-height: 62px;
-  margin: 0;
-  padding: 0;
+  min-height: 50px;
   list-style-type: none;
 
   a {
+    padding: 12px 30px;
     color: @white;
     text-decoration: none;
   }
@@ -24,49 +24,40 @@
 .main-nav__toggle {
   width: 60px;
   height: 40px;
+  margin-top: -40px;
+  margin-right: 10px;
+  margin-left: auto;
   order: 1;
 }
 
 @media (min-width: @tablet-width) {
   .main-nav {
     width: 660px;
-    margin: 0 auto;
   }
 
   .main-nav__wrapper {
     width: 660px;
-    margin: 0 auto;
-  }
-
-  .main-nav__list {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .main-nav__toggle {
-    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
     width: auto;
-    margin: 0;
   }
 
   .main-nav__wrapper {
     width: 1200px;
-    margin: 0 auto;
   }
 
   .main-nav__list {
-    width: 880px;
+    width: 800px;
+    margin-top: -40px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
+    font-weight: 400;
+    text-transform: none;
   }
 
   .main-nav__toggle {

@@ -1,7 +1,6 @@
 .system {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   padding-bottom: 35px;
   padding-left: 0;
   color: @white;
@@ -11,7 +10,7 @@
 .system__button {
   width: 281px;
   height: 55px;
-  margin: 28px auto;
+  margin-top: 70px;
   font-size: 18px;
   font-weight: 700;
   color: @white;
@@ -22,10 +21,10 @@
 
 .system__description {
   width: 229px;
-  margin: 10px auto;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
+  text-align: center;
 }
 
 .system__list {
@@ -34,7 +33,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0 auto;
+  margin-top: 20px;
   padding: 0;
   list-style-type: none;
 }
@@ -75,8 +74,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .header__logo {
-    order: 2;
-    height: 40px;
+  .system {
+    margin-top: -270px;
   }
 }
