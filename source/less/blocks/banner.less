@@ -1,6 +1,71 @@
 .banner__slogan {
+  width: 225px;
+  display: block;
+  position: absolute;
+  margin-top: 50px;
+  padding-left: 50px;
+  z-index: 1;
   font-size: 24px;
   font-weight: 300;
   line-height: auto;
+  text-align: center;
   color: @white;
+}
+
+.banner__background {
+  display: block;
+  margin-top: -75px;
+  z-index: -1;
+}
+
+.banner__overlay {
+  display: block;
+  position: absolute;
+  margin-top: -285px;
+  z-index: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .banner__slogan {
+    width: 600px;
+    font-size: 50px;
+
+    &--gallery {
+      width: 250px;
+    }
+
+    &--main {
+      width: 200px;
+      font-size: 40px;
+    }
+  }
+
+  .banner__overlay {
+    margin-left: 220px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner__slogan {
+    width: 900px;
+    padding-top: 40px;
+
+    &--gallery {
+      width: 600px;
+    }
+
+    &--main {
+      width: 250px;
+    }
+  }
+
+  .banner__background {
+    display: block;
+    margin-top: -100px;
+    z-index: -1;
+  }
+
+  .banner__overlay {
+    margin-left: 350px;
+  }
 }

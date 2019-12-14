@@ -1,9 +1,120 @@
+.footer {
+  margin-top: 20px;
+
+  &--index {
+    display: none;
+  }
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.footer__public {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer__socials {
+  width: 200px;
+  height: 40px;
+  margin-top: -5px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
   list-style-type: none;
+}
+
+.footer__account {
+  width: 51px;
+  height: 51px;
+  border: 3px @bg-light solid;
+  border-radius: 50%;
+}
+
+.footer__link {
+  display: block;
+
+  &--twitter {
+    width: 26px;
+    height: 35px;
+    display: block;
+    padding: 15px;
+    background: url("../img/icon-twitter.svg") no-repeat;
+    background-position-x: 18px;
+    background-position-y: 16px;
+  }
+
+  &--fb {
+    width: 26px;
+    height: 35px;
+    display: block;
+    padding: 15px;
+    background: url("../img/icon-facebook.svg") no-repeat;
+    background-position-x: 20px;
+    background-position-y: 16px;
+  }
+
+  &--youtube {
+    width: 26px;
+    height: 35px;
+    display: block;
+    padding: 15px;
+    background: url("../img/icon-youtube.svg") no-repeat;
+    background-position-x: 18px;
+    background-position-y: 18px;
+  }
 }
 
 .footer__developer {
   font-size: 14px;
   line-height: 18px;
   color: @color-subtext;
+
+  img {
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .footer {
+    &--index {
+      display: block;
+    }
+  }
+
+  .footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .footer__socials {
+    width: 200px;
+    margin-top: -5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+  }
+
+  .footer__account {
+    width: 51px;
+    height: 51px;
+    border: 3px @bg-light solid;
+    border-radius: 50%;
+  }
 }

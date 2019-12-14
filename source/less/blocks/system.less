@@ -1,9 +1,22 @@
 .system {
+  padding-bottom: 30px;
+  padding-left: 30px;
+  z-index: 1;
   color: @white;
   background-color: @bg-mobile;
 }
 
+.system__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 .system__button {
+  width: 280px;
+  height: 55px;
+  margin-top: 70px;
   font-size: 18px;
   font-weight: 700;
   color: @white;
@@ -13,11 +26,59 @@
 }
 
 .system__description {
+  width: 280px;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
+  text-align: center;
 }
 
 .system__list {
+  width: 280px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 0;
   list-style-type: none;
+}
+
+.system__apple {
+  width: 46px;
+  height: 57px;
+  background: url("../img/logo-apple.svg") no-repeat;
+  content: "";
+}
+
+.system__android {
+  width: 46px;
+  height: 57px;
+  background: url("../img/logo-android.svg") no-repeat;
+  content: "";
+}
+
+.system__windows {
+  width: 46px;
+  height: 57px;
+  background: url("../img/logo-microsoft.svg") no-repeat;
+  content: "";
+}
+
+@media (min-width: @tablet-width) {
+  .system {
+    z-index: 1;
+    margin-top: -300px;
+    background-color: inherit;
+  }
+
+  .system__button {
+    background-color: inherit;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .system {
+    margin-top: -270px;
+  }
 }
