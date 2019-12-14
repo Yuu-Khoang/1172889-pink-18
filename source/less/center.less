@@ -1,3 +1,18 @@
 .center {
+  width: 320px;
   margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .center {
+    width: 660px;
+    max-width: 660px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .center {
+    width: 960px;
+    max-width: 960px;
+  }
 }

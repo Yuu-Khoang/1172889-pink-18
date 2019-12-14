@@ -1,4 +1,4 @@
-.main-nav {
+.header__nav {
   width: 320px;
   display: flex;
   flex-direction: row;
@@ -10,7 +10,7 @@
   background-color: @bg-dark;
 }
 
-.main-nav__item {
+.header__page {
   min-height: 50px;
   list-style-type: none;
 
@@ -31,36 +31,27 @@
 }
 
 @media (min-width: @tablet-width) {
-  .main-nav {
-    width: 660px;
-  }
-
-  .main-nav__wrapper {
+  .header__menu {
     width: 660px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .main-nav {
-    width: auto;
-  }
-
-  .main-nav__wrapper {
-    width: 1200px;
-  }
-
-  .main-nav__list {
+  .header__nav {
     width: 800px;
-    margin-top: -40px;
+  }
+
+  .header__menu {
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     font-weight: 400;
     text-transform: none;
   }
 
-  .main-nav__toggle {
+  .header__toggle {
     display: none;
   }
 }

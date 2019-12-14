@@ -1,19 +1,24 @@
 .footer {
-  width: 200px;
-  margin: 20px auto;
+  margin-top: 20px;
 
   &--index {
     display: none;
   }
 }
 
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer__logo {
   display: block;
-  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .footer__public {
-  margin: 20px 0;
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -74,7 +79,6 @@
 }
 
 .footer__developer {
-  padding-left: 50px;
   font-size: 14px;
   line-height: 18px;
   color: @color-subtext;
@@ -86,15 +90,15 @@
 
 @media (min-width: @tablet-width) {
   .footer {
-    width: auto;
-    margin: 20px auto;
+    &--index {
+      display: block;
+    }
+  }
+
+  .footer__wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-  }
-
-  .footer__public {
-    margin: 0;
   }
 
   .footer__socials {
@@ -111,60 +115,5 @@
     height: 51px;
     border: 3px @bg-light solid;
     border-radius: 50%;
-  }
-
-  .footer__link {
-    &--twitter {
-      width: 26px;
-      height: 35px;
-      display: block;
-      padding: 15px;
-      background: url("../img/icon-twitter.svg") no-repeat;
-      background-position-x: 18px;
-      background-position-y: 16px;
-    }
-
-    &--fb {
-      width: 26px;
-      height: 35px;
-      display: block;
-      padding: 15px;
-      background: url("../img/icon-facebook.svg") no-repeat;
-      background-position-x: 20px;
-      background-position-y: 16px;
-    }
-
-    &--youtube {
-      width: 26px;
-      height: 35px;
-      display: block;
-      padding: 15px;
-      background: url("../img/icon-youtube.svg") no-repeat;
-      background-position-x: 18px;
-      background-position-y: 18px;
-    }
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .footer {
-    width: auto;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  .footer__public {
-    margin: 0;
-  }
-
-  .footer__socials {
-    width: 200px;
-    margin-top: -5px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-self: center;
   }
 }
