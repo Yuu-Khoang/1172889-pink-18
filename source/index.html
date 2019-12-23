@@ -19,8 +19,8 @@
           </picture>
         </a>
 
-        <nav class="header__nav">
-          <button class="header__toggle" type="button">Меню</button>
+        <nav class="header__nav header__nav--closed header__nav--nojs">
+          <button class="header__toggle" type="button"><span class="visually-hidden">Меню</span></button>
           <ul class="header__menu">
             <li class="header__page header__page--active">
               <a class="header__link">Главная</a>
@@ -258,6 +258,23 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    var navMain = document.querySelector('.header__nav');
+    var navToggle = document.querySelector('.header__toggle');
+
+    navMain.classList.remove('header__nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('header__nav--closed')) {
+        navMain.classList.remove('header__nav--closed');
+        navMain.classList.add('header__nav--opened');
+      } else {
+        navMain.classList.add('header__nav--closed');
+        navMain.classList.remove('header__nav--opened');
+      }
+    });
+  </script>
 
 </body>
 
