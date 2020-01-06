@@ -3,26 +3,28 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Главная страница фотоприложения Pink</title>
   <link type="text/css" href="css/style.css" rel="stylesheet">
 </head>
 
 
 <body>
-  <header class="header">
-    <div class="center">
-      <div class="header__wrapper">
-        <a class="header__link header__link--logo">
-          <picture>
-            <img class="header__logo" src="img/logo-pink-white-mobile.svg" alt="Логотип приложения Pink" width="75"
-              height="22">
-          </picture>
-        </a>
-
-        <nav class="header__nav header__nav--closed header__nav--nojs">
+  <section class="banner">
+    <header class="header">
+      <div class="header__wrap">
+        <div class="center header__wrapper">
+          <a class="header__logo">
+            <picture>
+              <img class="header__logo--img" src="img/logo-pink-white-desktop.svg" alt="Логотип приложения Pink">
+            </picture>
+          </a>
           <button class="header__toggle" type="button"><span class="visually-hidden">Меню</span></button>
+        </div>
+
+        <nav class="header__nav header__nav--nojs">
           <ul class="header__menu">
-            <li class="header__page header__page--active">
+            <li class="header__page">
               <a class="header__link">Главная</a>
             </li>
             <li class="header__page">
@@ -37,28 +39,18 @@
           </ul>
         </nav>
       </div>
+    </header>
+
+    <div class="center banner__wrap">
+      <h1 class="visually-hidden">Pink - фотоприложение для раскрашивания серых будней</h1>
+      <h2 class="banner__slogan banner__slogan--main">Взгляните на&nbsp;жизнь иначе!</h2>
+      <img class="banner__overlay" src="img/iphone-hand-desktop@1x.png" alt="Телефон с фотографией из приложения Pink" width="258" height="286">
     </div>
-  </header>
-
-  <main>
-    <section class="banner">
-      <div class="center">
-        <h1 class="visually-hidden">Pink - фотоприложение для раскрашивания серых будней</h1>
-        <h2 class="banner__slogan banner__slogan--main">Взгляните на&nbsp;жизнь иначе!</h2>
-        <picture>
-          <img class="banner__background" src="img/bg-back-mobile@1x.jpg"
-            alt="Темный фон для приложения с улицей и домом с колоннами" width="320" height="462">
-        </picture>
-        <img class="banner__overlay" src="img/iphone-hand-mobile@1x.png" alt="Телефон с фотографией из приложения Pink"
-          width="258" height="286">
-      </div>
-    </section>
-
 
     <section class="system">
       <div class="center">
         <div class="system__wrapper">
-          <button class="system__button">Скачать приложение</button>
+          <a class="system__button" href="#">Скачать приложение</a>
           <ul class="system__list">
             <li class="system__apple"><span class="visually-hidden">Apple</span></li>
             <li class="system__android"><span class="visually-hidden">Android</span></li>
@@ -69,6 +61,9 @@
       </div>
     </section>
 
+  </section>
+
+  <main>
     <section class="advantages">
       <h2 class="advantages__header">
         <span>Устали от&nbsp;серости мегаполиса?</span>
@@ -85,7 +80,7 @@
             </li>
             <li class="advantages__item">
               <h3 class="advantages__title">Меняет мир вокруг</h3>
-              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
+              <p class="advantages__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы<br>
                 усилить эффект</p>
             </li>
             <li class="advantages__item">
@@ -100,8 +95,8 @@
               alt="Фотография мусорных баков в серых тонах" width="292" height="302">
             <img class="advantages__image advantages__image--second" src="img/iphone-screen-2-desktop@1x.png"
               alt="Фотография мусорных баков с розовым фильтром" width="292" height="302">
-            <img class="advantages__image advantages__image--third" src="img/iphone-screen-mobile@1x.png"
-              alt="Смайлик в приложении Pink на фоне яркой розовой фотографии" width="157" height="320">
+            <img class="advantages__image advantages__image--third" src="img/iphone-screen-3-tablet@1x.png"
+              alt="Смайлик в приложении Pink на фоне яркой розовой фотографии">
           </div>
         </div>
       </div>
@@ -109,11 +104,10 @@
     </section>
 
     <section class="fact center">
-      <img class="fact__icon" src="/img/icon-clock-desktop.svg" width="298" height="345" alt="Таймер с цифрами 24">
+      <img class="fact__icon" src="/img/icon-clock-tablet.svg" alt="Таймер с цифрами 24">
       <div class="fact__wrapper">
         <p class="fact__title">Эффект на&nbsp;24 часа!</p>
-        <p class="fact__description">Британские ученые провели исследования и доказали, что положительный эффект от
-          использования приложения длится целые сутки!</p>
+        <p class="fact__description">Британские ученые провели исследования и доказали, что положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
         <p class="fact__link"><a href="#">Узнать больше об исследовании</a></p>
       </div>
     </section>
@@ -141,22 +135,22 @@
         <button class="slider__toggle" type="button"><span class="visually-hidden">2</span></button>
         <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
       </div>
-
     </section>
+
 
     <section class="tariffs">
       <h2 class="visually-hidden">Тарифные планы</h2>
       <div class="tariffs__wrapper">
         <ul class="tariffs__list tariffs__list--base">
           <li class="tariffs__item">
-            <div class="tariffs__title">
+            <div class="tariffs__title tariffs__title--first">
               <h3 class="tariffs__name">База</h3>
               <p class="tariffs__price">1,99 USD</p>
             </div>
             <ul class="tariffs__option">
-              <li class="tariffs__attribute tariffs__attribute--accept">Розовый фильтр</li>
-              <li class="tariffs__attribute tariffs__attribute--decline">Смайлики</li>
-              <li class="tariffs__attribute tariffs__attribute--decline">Комментарии</li>
+              <li class="tariffs__attribute tariffs__attribute--accept"><span>Розовый фильтр</span></li>
+              <li class="tariffs__attribute tariffs__attribute--decline"><span>Смайлики</span></li>
+              <li class="tariffs__attribute tariffs__attribute--decline"><span>Комментарии</span></li>
             </ul>
           </li>
         </ul>
@@ -167,28 +161,33 @@
               <p class="tariffs__price">3,99 USD</p>
             </div>
             <ul class="tariffs__option">
-              <li class="tariffs__attribute tariffs__attribute--accept">Розовый фильтр</li>
-              <li class="tariffs__attribute tariffs__attribute--accept">Смайлики</li>
-              <li class="tariffs__attribute tariffs__attribute--decline">Комментарии</li>
+              <li class="tariffs__attribute tariffs__attribute--accept"><span>Розовый фильтр</span></li>
+              <li class="tariffs__attribute tariffs__attribute--accept"><span>Смайлики</span></li>
+              <li class="tariffs__attribute tariffs__attribute--decline"><span>Комментарии</span></li>
             </ul>
           </li>
         </ul>
-        <ul class="tariffs__list  tariffs__list--unlim">
+        <ul class="tariffs__list tariffs__list--unlim">
           <li class="tariffs__item">
             <div class="tariffs__title">
               <h3 class="tariffs__name">Анлим</h3>
               <p class="tariffs__price">9,99 USD</p>
             </div>
             <ul class="tariffs__option">
-              <li class="tariffs__attribute tariffs__attribute--accept">Розовый фильтр</li>
-              <li class="tariffs__attribute tariffs__attribute--accept">Смайлики</li>
-              <li class="tariffs__attribute tariffs__attribute--accept">Комментарии</li>
+              <li class="tariffs__attribute tariffs__attribute--accept"><span>Розовый фильтр</span></li>
+              <li class="tariffs__attribute tariffs__attribute--accept"><span>Смайлики</span></li>
+              <li class="tariffs__attribute tariffs__attribute--accept"><span>Комментарии</span></li>
             </ul>
           </li>
         </ul>
+        <ul class="tariffs__fulloption">
+          <li class="tariffs__attribute tariffs__attribute--name">Розовый фильтр</li>
+          <li class="tariffs__attribute tariffs__attribute--name">Смайлики</li>
+          <li class="tariffs__attribute tariffs__attribute--name">Комментарии</li>
+        </ul>
       </div>
 
-      <div class="slider center">
+      <div class="slider center slider--tariffs">
         <button class="slider__toggle" type="button"><span class="visually-hidden">1</span></button>
         <button class="slider__toggle slider__toggle--active" type="button"><span
             class="visually-hidden">2</span></button>
@@ -197,31 +196,28 @@
     </section>
 
     <section class="contacts">
-        <div class="contacts__wrapper center">
-          <h2 class="contacts__header">Остались вопросы? Свяжитесь&nbsp;с&nbsp;нами!</h2>
-          <div class="contacts__block">
-            <p class="contacts__item">Звоните:</p>
-            <span><a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a></span>
-          </div>
-          <div class="ccontacts__block contacts__block--email">
-            <p class="contacts__item">Пишите:</p>
-            <span><a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></span>
-          </div>
-          <div class="contacts__block">
-            <p class="contacts__item">Приезжайте в гости:</p>
-            <address class="contacts__link">ул. Большая Конюшенная, 19/8</address>
-          </div>
+      <div class="contacts__wrapper center">
+        <h2 class="contacts__header">Остались вопросы? Свяжитесь&nbsp;с&nbsp;нами!</h2>
+        <div class="contacts__block">
+          <p class="contacts__item">Звоните:</p>
+          <span><a class="contacts__link" href="tel:+78125556666">+7 (812) 555-66-66</a></span>
+        </div>
+        <div class="contacts__block contacts__block--email">
+          <p class="contacts__item">Пишите:</p>
+          <span><a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></span>
+        </div>
+        <div class="contacts__block contacts__block--address">
+          <p class="contacts__item">Приезжайте в гости:</p>
+          <address class="contacts__link">ул. Большая Конюшенная, 19/8</address>
+        </div>
       </div>
     </section>
-
-    <div class="center">
-      <img src="img/bg-map-mobile@1x.png" width="320" height="645" alt="Адрес офиса: Большая Конюшенная, 19/8">
-    </div>
   </main>
 
-  <footer class="footer footer--index">
+  <footer class="footer footer__map">
+
     <div class="center">
-      <div class="footer__wrapper">
+      <div class="footer__wrapper footer__wrapper--index">
         <a class="footer__link">
           <img class="footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Логотип приложения Pink" width="147"
             height="40">
@@ -259,13 +255,13 @@
     </div>
   </footer>
 
-  <script>
+<!--   <script>
     var navMain = document.querySelector('.header__nav');
     var navToggle = document.querySelector('.header__toggle');
 
     navMain.classList.remove('header__nav--nojs');
 
-    navToggle.addEventListener('click', function() {
+    navToggle.addEventListener('click', function () {
       if (navMain.classList.contains('header__nav--closed')) {
         navMain.classList.remove('header__nav--closed');
         navMain.classList.add('header__nav--opened');
@@ -274,7 +270,7 @@
         navMain.classList.remove('header__nav--opened');
       }
     });
-  </script>
+  </script> -->
 
 </body>
 

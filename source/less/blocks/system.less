@@ -1,6 +1,5 @@
 .system {
-  padding-bottom: 30px;
-  padding-left: 30px;
+  padding: 30px 0;
   z-index: 1;
   color: @white;
   background-color: @bg-mobile;
@@ -14,19 +13,22 @@
 }
 
 .system__button {
-  width: 280px;
-  height: 55px;
-  margin-top: 70px;
+  width: 275px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  text-align: center;
   font-size: 18px;
   font-weight: 700;
   color: @white;
-  background-color: @bg-mobile;
+  background-color: transparent;
   border: 3px @white solid;
   border-radius: 50px;
+  text-decoration: none;
 }
 
 .system__description {
   width: 280px;
+  margin: 0;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
@@ -34,51 +36,75 @@
 }
 
 .system__list {
-  width: 280px;
+  width: 242px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 20px;
-  padding: 0;
+  align-items: baseline;
+  margin-top: 31px;
+  margin-bottom: 22px;
+  padding: 0 18px;
   list-style-type: none;
 }
 
 .system__apple {
-  width: 46px;
-  height: 57px;
-  background: url("../img/logo-apple.svg") no-repeat;
-  content: "";
+  width: 47px;
+  height: 56px;
+  background: url("../img/logo-apple.svg") no-repeat center;
 }
 
 .system__android {
-  width: 46px;
-  height: 57px;
-  background: url("../img/logo-android.svg") no-repeat;
-  content: "";
+  width: 43px;
+  height: 47px;
+  background: url("../img/logo-android.svg") no-repeat center;
 }
 
 .system__windows {
-  width: 46px;
-  height: 57px;
-  background: url("../img/logo-microsoft.svg") no-repeat;
-  content: "";
+  width: 44px;
+  height: 47px;
+  background: url("../img/logo-microsoft.svg") no-repeat center;
 }
 
 @media (min-width: @tablet-width) {
   .system {
-    z-index: 1;
-    margin-top: -300px;
-    background-color: inherit;
+    position: relative;
+    z-index: 2;
+    padding-top: 0;
+    padding-bottom: 63px;
+    background-color: transparent;
   }
 
   .system__button {
-    background-color: inherit;
+    width: 295px;
+  }
+
+  .system__list {
+    width: 245px;
+    padding: 0 25px;
+    margin-top: 46px;
+    margin-bottom: 40px;
+  }
+
+  .system__description {
+    width: 300px;
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .system {
-    margin-top: -270px;
+  .system__wrapper {
+    width: 300px;
+  }
+
+  .system__button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .system__list {
+    margin-top: 67px;
+    margin-bottom: 60px;
   }
 }

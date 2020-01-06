@@ -1,54 +1,133 @@
 .header {
   z-index: 1;
-  background-color: @bg-dark;
+  background-color: @black-opacity;
   color: @white;
+
+  &--active {
+    background-color: @bg-dark;
+
+    .header__toggle {
+      border: none;
+
+      &::before,
+      &::after {
+        width: 29px;
+        height: 3px;
+        position: absolute;
+        top: 40%;
+        left: 80%;
+        background-color: @white;
+        content: "";
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &:hover::before,
+      &:hover::after {
+        background-color: @color-contrast;
+      }
+
+      &:active::before,
+      &:active::after {
+        background-color: @color-contrast-opacity;
+      }
+    }
+
+    .header__nav {
+      display: block;
+    }
+  }
 }
 
 .header__logo {
+  display: block;
+}
+
+.header__logo-img {
   width: 90px;
   height: 22px;
-  margin-top: 23px;
+  transform: translate(-7px, 0);
+  display: block;
 }
 
 .header__nav {
-  width: 320px;
-  min-height: 55px;
-  position: relative;
-  z-index: 1;
   font-size: 18px;
   font-weight: 700;
   line-height: 32px;
   text-align: center;
   text-transform: uppercase;
+  display: none;
+  width: 100%;
 }
 
 .header__toggle {
-  width: 60px;
-  height: 40px;
-  position: absolute;
-  margin-top: -50px;
+  width: 50px;
+  height: 24px;
   margin-left: auto;
-  z-index: 2;
-  top: 0;
   cursor: pointer;
-  background-color: @bg-dark;
+  background-color: transparent;
   border: none;
+  position: relative;
+  padding: 0;
+  border-top: 4px solid @white;
+  border-bottom: 4px solid @white;
 
-  &:hover,
+  &:hover {
+    border-color: @color-contrast;
+
+    &::before {
+      background-color: @color-contrast;
+    }
+  }
+
   &:active {
-    color: @color-contrast;
+    border-color: @color-contrast-opacity;
+
+    &::before {
+      background-color: @color-contrast-opacity;
+    }
+  }
+
+  &::before {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    left: 0;
+    background-color: @white;
+    content: "";
   }
 }
 
-.header__page {
-  min-height: 50px;
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 22px;
+}
+
+.header__menu {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px @black solid;
+}
+
+.header__page {
   border-top: 1px fade(@white, 15%) solid;
   border-bottom: 1px @black solid;
 }
 
 .header__link {
-  padding: 12px 30px;
+  display: block;
+  padding: 15px 0;
   color: @white;
   text-decoration: none;
 
@@ -59,144 +138,56 @@
   &:active {
     color: fade(@color-contrast, 30%);
   }
-
-  &--logo {
-    flex-grow: 1;
-    align-self: flex-start;
-  }
 }
 
-@media (max-width: @mobile-width-only) {
-  .header__nav--closed .header__menu {
+.header__nav--nojs {
+  .header__toggle {
     display: none;
   }
 
-  .header__nav--closed .header__toggle::before {
-    width: 36px;
-    height: 2px;
-    position: absolute;
-    top: 15px;
-    left: 17px;
-    background-color: @white;
-    box-shadow: 0 8px 0 0 @white, 0 16px 0 0 @white;
-    content: "";
-  }
-
-  .header__nav--closed .header__toggle:hover::before {
-    background-color: @color-contrast;
-    box-shadow: 0 8px 0 0 @color-contrast, 0 16px 0 0 @color-contrast;
-  }
-
-  .header__nav--closed .header__toggle:active::before {
-    background-color: fade(@color-contrast, 30%);
-    box-shadow: 0 8px 0 0 fade(@color-contrast, 30%), 0 16px 0 0 fade(@color-contrast, 30%);
-  }
-
-  .header__nav--opened .header__toggle {
-    top: 0;
-    right: auto;
-    left: 0;
-
-    &::before,
-    &::after {
-      width: 36px;
-      height: 2px;
-      margin-left: auto;
-      position: absolute;
-      top: 15px;
-      left: 18px;
-      background-color: #ffffff;
-      content: "";
-    }
-
-    &::before {
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-
-    &:hover::before,
-    &:hover::after {
-      background-color: @color-contrast;
-    }
-
-    &:active::before,
-    &:active::after {
-      background-color: fade(@color-contrast, 30%);
-    }
-  }
-
-  .header__nav--nojs .header__toggle {
-    display: none;
-  }
-
-  .header__nav--nojs .header__wrapper {
-    position: static;
-    min-height: 0;
-  }
-
-  .header__nav--nojs .header__menu {
-    display: block;
-  }
-
-  .header__nav--nojs .header__page--active a {
-    padding-right: 21px;
-    padding-left: 21px;
-    text-align: left;
-  }
-
-  .header__nav--nojs .header__page {
+  .header__page {
     display: block;
   }
 }
 
 @media (min-width: @tablet-width) {
   .header__wrapper {
-    width: 660px;
+    padding-top: 27px;
+    padding-bottom: 36px;
   }
 
-  .header__logo {
+  .header__logo-img {
+    width: 147px;
     height: 40px;
-    order: 2;
-  }
-
-  .header__nav {
-    width: 660px;
-    justify-content: center;
-  }
-
-  .header__menu {
-    margin-left: auto;
+    transform: none;
   }
 
   .header__toggle {
-    margin-top: -55px;
-    margin-left: auto;
+    margin-top: 12px;
+    align-self: center;
+  }
+
+  .header__link {
+    padding: 15px 0;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .header {
-    background-color: fade(@black, 30%);
+  .header__wrap {
+    width: 960px;
+    display: flex;
+    align-items: flex-end;
+    margin: 0 auto;
+    padding-top: 27px;
+    padding-bottom: 43px;
   }
 
   .header__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-content: center;
-  }
-
-  .header__link {
-    margin-top: 10px;
-
-    &--logo {
-      margin-top: -20px;
-      flex-shrink: 0;
-    }
+    width: auto;
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    padding: 0;
   }
 
   .header__logo {
@@ -206,21 +197,31 @@
   }
 
   .header__menu {
-    width: 700px;
-    padding: 0;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    font-weight: 400;
-    text-transform: none;
+    border: none;
   }
 
-  .header__toggle {
-    display: none;
+  .header__link {
+    padding: 0;
+  }
+
+  .header__nav {
+    width: auto;
+    display: block;
+    text-transform: none;
+    font-weight: 400;
   }
 
   .header__page {
     border: none;
+    margin-right: 81px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .header__toggle {
+    display: none;
   }
 }
