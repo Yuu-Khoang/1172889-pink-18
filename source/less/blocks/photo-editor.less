@@ -17,5 +17,30 @@
 }
 
 .photo-editor__filtres {
+  display: flex;
+  align-items: center;
   list-style-type: none;
+}
+
+.photo-editor__icon {
+  width: 44px;
+  height: 44px;
+  display: block;
+  fill: #b5b9be;
+
+  &:hover {
+    fill: #8d949b;
+  }
+
+  &:active {
+    fill: @color-contrast;
+  }
+}
+
+.photo-editor__scale {
+  &--active {
+    width: 240px;
+    height: 2px;
+    background-color: @black;
+  }
 }

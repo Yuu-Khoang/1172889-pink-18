@@ -1,5 +1,5 @@
 .banner {
-  background: #2c394a url(../img/bg-back-mobile@1x.jpg) no-repeat center top;
+  background: #2c394a url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
 }
 
 .banner__slogan {
@@ -17,7 +17,9 @@
   &--competition,
   &--gallery {
     margin-bottom: 0;
-    padding-bottom: 24px;
+    padding-top: 10px;
+    padding-bottom: 83px;
+    line-height: 30px;
   }
 
   &--main {
@@ -76,18 +78,19 @@
 
 @media (min-width: @desktop-width) {
   .banner {
-    background-image: url(../img/bg-back-desktop@1x.jpg);
+    height: 853px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
   }
 
   .banner__slogan {
     width: 237px;
-    margin-top: 119px;
+    margin-top: 108px;
     margin-bottom: 55px;
-    margin-left: 35px;
+    margin-left: 20px;
 
     &--main {
       font-size: 50px;
-      line-height: 50px;
+      line-height: 58px;
     }
   }
 
@@ -95,7 +98,7 @@
     width: 1050px;
     max-width: 1050px;
     height: 645px;
-    top: -82px;
-    left: 20px;
+    top: -10px;
+    left: 45px;
   }
 }

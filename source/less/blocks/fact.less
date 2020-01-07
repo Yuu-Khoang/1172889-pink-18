@@ -4,8 +4,12 @@
 
 @media (min-width: @tablet-width) {
   .fact {
+    display: block;
+  }
+
+  .fact__flex {
     display: flex;
-    margin-top: 50px;
+    padding-top: 50px;
   }
 
   .fact__icon {
@@ -44,19 +48,29 @@
 
 @media (min-width: @desktop-width) {
   .fact {
+    display: block;
+    background-color: @bg-light;
+  }
+
+  .fact__flex {
+    padding-top: 45px;
+    padding-bottom: 65px;
+    padding-left: 10px;
     display: flex;
   }
 
   .fact__wrapper {
-    padding-top: 70px;
+    padding-top: 50px;
   }
 
   .fact__title {
     width: 500px;
+    margin-bottom: 25px;
   }
 
   .fact__description {
-    width: 520px;
+    width: 530px;
+    margin-bottom: 30px;
     font-size: 18px;
     line-height: 30px;
     color: @color-subtext;

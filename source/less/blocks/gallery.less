@@ -4,8 +4,9 @@
 }
 
 .gallery__header {
-  width: 250px;
-  margin: 10px auto;
+  width: 300px;
+  margin-top: 43px;
+  margin-bottom: 50px;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
@@ -25,22 +26,29 @@
 
 .gallery__userblock {
   width: 280px;
-  margin: 20px auto;
+  margin-top: 25px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: baseline;
   line-height: 24px;
   background-color: @bg-light;
+
+  &--panorama {
+    margin-top: 0;
+    padding-top: 40px;
+  }
 }
 
 .gallery__user {
+  margin: 0;
   padding-left: 19px;
   font-size: 14px;
   font-weight: 700;
 }
 
 .gallery__time {
+  margin: 0;
   margin-left: 5px;
   font-size: 12px;
   font-weight: 300;
@@ -48,7 +56,7 @@
 }
 
 .gallery__comment {
-  width: 280px;
+  margin: 0;
   padding-left: 19px;
   padding-right: 19px;
   flex-grow: 1;
@@ -63,7 +71,7 @@
 
   &--panorama {
     width: 100%;
-    height: 180px;
+    height: 137px;
     padding: 0;
     margin-bottom: -25px;
   }
