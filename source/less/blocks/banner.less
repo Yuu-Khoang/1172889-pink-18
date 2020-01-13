@@ -14,7 +14,13 @@
   text-align: center;
   color: @white;
 
-  &--competition,
+  &--competition {
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 53px;
+    line-height: 30px;
+  }
+
   &--gallery {
     margin-bottom: 0;
     padding-top: 10px;
@@ -34,8 +40,12 @@
 
 @media (min-width: @tablet-width) {
   .banner {
-    height: 729px;
+    height: 695px;
     background: url("../img/bg-back-tablet@1x.jpg") no-repeat center top;
+
+    &--main {
+      height: 729px;
+    }
   }
 
   .banner__wrap {
@@ -47,14 +57,14 @@
     font-size: 50px;
     position: relative;
     z-index: 2;
-    margin-top: 95px;
+    margin-top: 68px;
     margin-bottom: 35px;
+    line-height: 58px;
 
     &--gallery {
       width: 360px;
-      margin-top: 78px;
-      margin-bottom: 0;
-      padding-bottom: 140px;
+      margin-bottom: 25px;
+      padding-bottom: 110px;
     }
 
     &--main {
@@ -78,17 +88,23 @@
 
 @media (min-width: @desktop-width) {
   .banner {
-    height: 853px;
-    background-image: url("../img/bg-back-desktop@1x.jpg");
+    height: 395px;
+
+    &--main {
+      height: 853px;
+      background-image: url("../img/bg-back-desktop@1x.jpg");
+    }
   }
 
   .banner__slogan {
-    width: 237px;
-    margin-top: 108px;
-    margin-bottom: 55px;
-    margin-left: 20px;
+    width: 650px;
+    margin-top: 55px;
 
     &--main {
+      width: 237px;
+      margin-top: 108px;
+      margin-bottom: 55px;
+      margin-left: 20px;
       font-size: 50px;
       line-height: 58px;
     }

@@ -11,12 +11,13 @@
 
 <body>
   <section class="banner">
-    <header class="header">
+    <header class="header header--active">
       <div class="header__wrap">
         <div class="center  header__wrapper">
           <a class="header__logo" href="index.html">
             <picture>
-              <img class="header__logo-img" src="img/logo-pink-white-tablet.svg" alt="Логотип приложения Pink" width="75" height="22">
+              <img class="header__logo-img" src="img/logo-pink-white-tablet.svg" alt="Логотип приложения Pink"
+                width="75" height="22">
             </picture>
           </a>
           <button class="header__toggle" type="button"><span class="visually-hidden">Меню</span></button>
@@ -46,10 +47,10 @@
 
   <main>
     <section class="form">
-      <p class="form__header">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу
-        бонусную карту!</p>
-      <form method="get" action="https://echo.htmlacademy.ru/">
-        <div class="form__fullname">
+      <p class="form__header center">Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу
+        бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
+      <form class="form__flex" method="get" action="https://echo.htmlacademy.ru/">
+        <div class="form__fullname center">
           <p class="form__surname">
             <label for="surname">Фамилия:</label>
             <input type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
@@ -63,39 +64,45 @@
             <input type="text" name="middlename" id="middlename" placeholder="Ну и отчество тоже">
           </p>
         </div>
-        <div class="form__wrapper">
-          <p class="form__title">Ваши безбашенные достижения в путешествии</p>
-          <ul class="form__achievements">
-            <li class="form__progress">
-              <input class="form__checkbox form__checkbox--checked" type="checkbox" name="achievements" id="selfi-shark"
-                value="selfi-shark" checked>
-              <label for="selfi-shark">Сделал селфи с акулой</label>
-            </li>
-            <li class="form__progress">
-              <input class="form__checkbox form__checkbox--checked" type="checkbox" name="achievements" id="sunburned"
-                value="sunburned-beach" checked>
-              <label for="sunburned">Обгорел на пляже</label>
-            </li>
-            <li class="form__progress">
-              <input class="form__checkbox" type="checkbox" name="achievements" id="norris" value="saw-norris">
-              <label for="norris">Видел Чака Норриса</label>
-            </li>
-            <li class="form__progress">
-              <input class="form__checkbox" type="checkbox" name="achievements" id="souvenirs" value="bought-souvenirs">
-              <label for="souvenirs">Накупил сувениров</label>
-            </li>
-            <li class="form__progress">
-              <input class="form__checkbox form__checkbox--checked" type="checkbox" name="achievements" id="tower"
-                value="held-tower" checked>
-              <label for="tower">Удержал башню</label>
-            </li>
-            <li class="form__progress">
-              <input class="form__checkbox" type="checkbox" name="achievements" id="hotel" value="destroyed-hotel">
-              <label for="hotel">Разгромил отель</label>
-            </li>
-          </ul>
+        <div class="form__wrapper form__wrapper--achievements">
+          <div class="center">
+            <p class="form__title">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</p>
+            <ul class="form__achievements">
+              <li class="form__progress">
+                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="selfi-shark"
+                  value="selfi-shark" checked>
+                <label for="selfi-shark">Сделал селфи с акулой</label>
+              </li>
+              <li class="form__progress">
+                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="sunburned"
+                  value="sunburned-beach" checked>
+                <label for="sunburned">Обгорел на пляже</label>
+              </li>
+              <li class="form__progress">
+                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="norris"
+                  value="saw-norris">
+                <label for="norris">Видел Чака Норриса</label>
+              </li>
+              <li class="form__progress">
+                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="souvenirs"
+                  value="bought-souvenirs">
+                <label for="souvenirs">Накупил сувениров</label>
+              </li>
+              <li class="form__progress">
+                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="tower"
+                  value="held-tower" checked>
+                <label for="tower">Удержал башню</label>
+              </li>
+              <li class="form__progress">
+                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="hotel"
+                  value="destroyed-hotel">
+                <label for="hotel">Разгромил отель</label>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="form__contacts">
+        <div class="form__contacts center">
+          <p class="form__title"><span>Контактная информация</span></p>
           <p class="form__phone">
             <label for="phone">Номер телефона</label>
             <input type="tel" name="phone" id="phone" placeholder="Номер, пожалуйста" pattern="[0-9]{11}">
@@ -105,26 +112,30 @@
             <input type="email" name="email" id="email" placeholder="Введите почту*" required>
           </p>
         </div>
-        <div class="form__wrapper">
-          <p class="form__title">С каким приложением путешествовали?</p>
-          <ul class="form__statistics">
-            <li class="form__apps">
-              <input class="form__radio form__radio--checked" type="radio" name="system-statistics" id="pink-ios"
-                value="ios" checked>
-              <label for="pink-ios">Pink для iOS</label>
-            </li>
-            <li class="form__apps">
-              <input class="form__radio" type="radio" name="system-statistics" id="pink-android" value="android">
-              <label for="pink-android">Pink на Android</label>
-            </li>
-            <li class="form__apps">
-              <input class="form__radio" type="radio" name="system-statistics" id="pink-windows-phone"
-                value="windows-phone">
-              <label for="pink-windows-phone">Windows Phone</label>
-            </li>
-          </ul>
+        <div class="form__wrapper form__wrapper--statistics">
+          <div class="center">
+            <p class="form__title">С каким приложением путешествовали?</p>
+            <ul class="form__statistics">
+              <li class="form__apps">
+                <input class="visually-hidden form__radio" type="radio" name="system-statistics" id="pink-ios"
+                  value="ios" checked>
+                <label for="pink-ios">Pink для iOS</label>
+              </li>
+              <li class="form__apps">
+                <input class="visually-hidden form__radio" type="radio" name="system-statistics" id="pink-android"
+                  value="android">
+                <label for="pink-android">Pink на Android</label>
+              </li>
+              <li class="form__apps">
+                <input class="visually-hidden form__radio" type="radio" name="system-statistics" id="pink-windows-phone"
+                  value="windows-phone">
+                <label for="pink-windows-phone">Windows Phone</label>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="form__text">
+        <div class="form__text center">
+
           <p class="form__title">Опишите свои эмоции</p>
           <label for="form-textarea" class="visually-hidden">Текст</label>
           <textarea name="form-textarea" id="form-textarea"
@@ -132,7 +143,10 @@
           <button class="form__button" type="submit">Отправить форму</button>
         </div>
       </form>
-      <p class="form__footnote"><span class="form__footnote--contrast">*</span> - обязательные поля</p>
+      <div class="center">
+        <p class="form__footnote"><span class="form__footnote--contrast">*</span> - обязательные поля</p>
+      </div>
+
 
       <div class="popup popup--error">
         <p class="popup__header">Что-то пошло не так!</p>
