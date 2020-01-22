@@ -16,7 +16,10 @@
         <div class="center header__wrapper">
           <a class="header__logo">
             <picture>
-              <img class="header__logo--img" src="img/logo-pink-white-desktop.svg" alt="Логотип приложения Pink">
+              <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+              <img class="header__logo-img" src="img/logo-pink-white-mobile.svg" alt="Логотип приложения Pink"
+                width="75" height="22">
             </picture>
           </a>
           <button class="header__toggle" type="button"><span class="visually-hidden">Меню</span></button>
@@ -44,7 +47,12 @@
     <div class="center banner__wrap">
       <h1 class="visually-hidden">Pink - фотоприложение для раскрашивания серых будней</h1>
       <h2 class="banner__slogan banner__slogan--main">Взгляните на&nbsp;жизнь иначе!</h2>
-      <img class="banner__overlay" src="img/iphone-hand-desktop@1x.png" alt="Телефон с фотографией из приложения Pink" width="258" height="286">
+      <picture>
+        <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png">
+        <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png">
+        <img class="banner__overlay" src="img/iphone-hand-mobile@1x.png" alt="Телефон с фотографией из приложения Pink"
+          width="258" height="286">
+      </picture>
     </div>
 
     <section class="system">
@@ -75,25 +83,40 @@
           <ul class="advantages__list">
             <li class="advantages__item">
               <h3 class="advantages__title">Поднимает настроение</h3>
-              <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию буквально в
+              <p class="advantages__description">Приложение позволит вам победить осеннюю хандру и&nbsp;депрессию
+                буквально в
                 несколько кликов!</p>
             </li>
             <li class="advantages__item">
               <h3 class="advantages__title">Меняет мир вокруг</h3>
-              <p class="advantages__description">Сделайте снимок и украсьте&nbsp;его смайликом или&nbsp;текстовой подписью, чтобы усилить эффект</p>
+              <p class="advantages__description">Сделайте снимок и украсьте&nbsp;его смайликом или&nbsp;текстовой
+                подписью, чтобы усилить эффект</p>
             </li>
             <li class="advantages__item">
               <h3 class="advantages__title">Заводит новых&nbsp;друзей</h3>
-              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и&nbsp;заводите новых</p>
+              <p class="advantages__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями
+                и&nbsp;заводите новых</p>
             </li>
           </ul>
           <div class="advantages__images">
-            <img class="advantages__image advantages__image--first" src="img/iphone-screen-1-desktop@1x.png"
-              alt="Фотография мусорных баков в серых тонах" width="292" height="302">
-            <img class="advantages__image advantages__image--second" src="img/iphone-screen-2-desktop@1x.png"
-              alt="Фотография мусорных баков с розовым фильтром" width="292" height="302">
-            <img class="advantages__image advantages__image--third" src="img/iphone-screen-3-desktop@1x.png"
-              alt="Смайлик в приложении Pink на фоне яркой розовой фотографии">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/iphone-screen-1-desktop@1x.png">
+              <source media="(min-width: 660px)" srcset="img/iphone-screen-1-tablet@1x.png">
+              <img class="advantages__image advantages__image--first" src="img/iphone-screen-1-desktop@1x.png"
+                alt="Фотография мусорных баков в серых тонах" width="292" height="302">
+            </picture>
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/iphone-screen-2-desktop@1x.png">
+              <source media="(min-width: 660px)" srcset="img/iphone-screen-2-tablet@1x.png">
+              <img class="advantages__image advantages__image--second" src="img/iphone-screen-2-desktop@1x.png"
+                alt="Фотография мусорных баков с розовым фильтром" width="292" height="302">
+            </picture>
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png">
+              <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png">
+              <img class="advantages__image advantages__image--third" src="img/iphone-screen-3-desktop@1x.png"
+                alt="Смайлик в приложении Pink на фоне яркой розовой фотографии">
+            </picture>
           </div>
         </div>
       </div>
@@ -102,13 +125,17 @@
 
     <section class="fact">
       <div class="fact__flex center">
-    <img class="fact__icon" src="/img/icon-clock-desktop.svg" alt="Таймер с цифрами 24">
-      <div class="fact__wrapper">
-        <p class="fact__title">Эффект на&nbsp;24 часа!</p>
-        <p class="fact__description">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект от&nbsp;использования приложения длится целые сутки!</p>
-        <p class="fact__link"><a href="#">Узнать больше об исследовании</a></p>
+        <picture>
+          <source media="(min-width: 660px)" srcset="img/icon-clock-tablet.svg">
+          <img class="fact__icon" src="/img/icon-clock-desktop.svg" alt="Таймер с цифрами 24">
+        </picture>
+        <div class="fact__wrapper">
+          <p class="fact__title">Эффект на&nbsp;24 часа!</p>
+          <p class="fact__description">Британские ученые провели исследования и доказали, что&nbsp;положительный эффект
+            от&nbsp;использования приложения длится целые сутки!</p>
+          <p class="fact__link"><a href="#">Узнать больше об исследовании</a></p>
+        </div>
       </div>
-    </div>
     </section>
 
     <section class="reviews">
@@ -218,8 +245,12 @@
     <div class="center">
       <div class="footer__wrapper footer__wrapper--index">
         <a class="footer__link">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
           <img class="footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Логотип приложения Pink" width="147"
             height="40">
+          </picture>
         </a>
 
         <div class="footer__public">
@@ -254,7 +285,7 @@
     </div>
   </footer>
 
-<!--   <script>
+  <!--   <script>
     var navMain = document.querySelector('.header__nav');
     var navToggle = document.querySelector('.header__toggle');
 
