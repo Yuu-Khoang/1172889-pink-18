@@ -1,0 +1,258 @@
+.gallery {
+  margin: 0 auto;
+  color: @color-subtext;
+}
+
+.gallery__header {
+  width: 300px;
+  margin-top: 45px;
+  margin-bottom: 50px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.gallery__description {
+  width: 255px;
+  margin: 0 auto;
+  padding-top: 25px;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+
+  p {
+    margin-top: 0;
+  }
+}
+
+.gallery__userblock {
+  width: 280px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  background-color: @bg-light;
+
+  &--panorama {
+    margin-top: 0;
+    padding-top: 38px;
+  }
+}
+
+.gallery__user {
+  margin: 0;
+  padding-left: 19px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.gallery__time {
+  margin: 0;
+  margin-left: 5px;
+  font-size: 12px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.gallery__comment {
+  width: 100%;
+  margin: 0;
+  padding-left: 19px;
+  padding-right: 10px;
+  flex-grow: 1;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 3px;
+}
+
+.gallery__image {
+  width: 280px;
+  height: 180px;
+  margin-bottom: 17px;
+  padding-left: 0;
+  flex-grow: 1;
+
+  &--panorama {
+    width: 100%;
+    height: 137px;
+    padding: 0;
+    margin-bottom: -24px;
+  }
+}
+
+.gallery__like {
+  padding-left: 19px;
+  margin-top: 13px;
+  margin-bottom: 0;
+  padding-bottom: 22px;
+  flex-grow: 1;
+  order: 1;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: @color-contrast;
+}
+
+.gallery__tap {
+  width: 13px;
+  height: 20px;
+  background: url("../img/icon-heart.svg") no-repeat;
+  margin-left: 15px;
+  border: none;
+  content: "";
+}
+
+@media (min-width: @tablet-width) {
+  .gallery__header {
+    margin-top: 92px;
+    margin-bottom: 76px;
+    width: 520px;
+    font-size: 18px;
+  }
+
+  .gallery__flex {
+    width: 620px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .gallery__userblock {
+    width: 300px;
+    height: 455px;
+    align-self: baseline;
+
+    &--panorama {
+      width: 620px;
+      height: auto;
+      padding-top: 28px;
+      padding-bottom: 24px;
+      justify-content: space-around;
+    }
+  }
+
+  .gallery__user {
+    padding-left: 27px;
+  }
+
+  .gallery__comment {
+    width: 525px;
+    min-height: 42px;
+    margin-top: 3px;
+    padding-left: 27px;
+    order: 3;
+
+    &--panorama {
+      margin-top: -3px;
+      order: 4;
+    }
+  }
+
+  .gallery__like {
+    order: 3;
+    margin-top: 19px;
+    margin-left: auto;
+    padding-bottom: 30px;
+    padding-left: 25px;
+
+    &--panorama {
+      flex-grow: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .gallery__tap {
+    order: 3;
+    padding-right: 35px;
+
+    &--panorama {
+      padding-right: 35px;
+    }
+  }
+
+  .gallery__image {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 21px;
+    flex-grow: 1;
+
+    &--panorama {
+      width: 100%;
+      height: 511px;
+      padding: 0;
+      margin-bottom: -25px;
+    }
+  }
+
+  .gallery__description {
+    width: 550px;
+    padding-top: 44px;
+    font-size: 18px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery__header {
+    width: 700px;
+    margin-bottom: 87px;
+  }
+
+  .gallery__flex {
+    width: 940px;
+    margin-top: 0;
+    margin-left: -10px;
+  }
+
+  .gallery__userblock {
+    width: 300px;
+    min-height: 555px;
+    margin-top: 48px;
+    margin-bottom: 5px;
+
+    &--panorama {
+      width: 940px;
+      min-height: 85px;
+      margin-left: -10px;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      justify-content: space-around;
+      padding-top: 8px;
+    }
+  }
+
+  .gallery__comment {
+    width: 920px;
+    min-height: 50px;
+    margin-top: 4px;
+
+    &--panorama {
+      margin-top: -5px;
+    }
+  }
+
+  .gallery__like {
+    justify-self: flex-end;
+    margin-top: 17px;
+  }
+
+  .gallery__image {
+    width: 300px;
+    height: 400px;
+    flex-grow: 1;
+
+    &--panorama {
+      width: auto;
+      margin: 0 auto;
+      display: block;
+      height: 507px;
+      padding: 0;
+    }
+  }
+
+  .gallery__description {
+    padding-top: 58px;
+  }
+}

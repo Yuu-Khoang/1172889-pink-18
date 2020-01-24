@@ -153,7 +153,7 @@
             <button class="gallery__tap"><span class="visually-hidden">Поставить лайк</span></button>
           </div>
           <div class="gallery__description">
-            <p>Затмите их всех!</p>
+            <span>Затмите их всех!</span>
             <p>Выкладывайте&nbsp;все,&nbsp;что накопилось в телефоне!</p>
           </div>
         </div>
@@ -224,9 +224,12 @@
   <footer class="footer">
     <div class="center">
       <div class="footer__wrapper">
-        <a href="index.html" class="footer__link">
-          <img class="footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Логотип приложения Pink" width="147"
-            height="40">
+        <a class="footer__pink" href="index.html">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-blue-mobile.svg">
+            <img class="footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Логотип приложения Pink" width="147" height="40">
+          </picture>
         </a>
 
         <div class="footer__public">
@@ -250,7 +253,8 @@
         </div>
 
 
-        <p class="footer__developer">Разработано
+        <p class="footer__developer">
+          Разработано
           <a href="https://htmlacademy.ru/intensive/adaptive">
             <img src="img/logo-htmlacademy.svg"
               alt="Логотип HTML Академии в виде квадратной академической шапочки на фоне белого щита">
