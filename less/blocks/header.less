@@ -8,6 +8,8 @@
 
     .header__toggle {
       border: none;
+      margin-right: 1px;
+      margin-top: 3px;
 
       &::before,
       &::after {
@@ -152,8 +154,8 @@
 
 @media (min-width: @tablet-width) {
   .header__wrapper {
-    padding-top: 27px;
-    padding-bottom: 36px;
+    padding-top: 24px;
+    padding-bottom: 39px;
   }
 
   .header__logo-img {
@@ -162,9 +164,11 @@
     transform: none;
   }
 
-  .header__toggle {
-    margin-top: 12px;
-    align-self: center;
+  .header--active {
+    .header__toggle {
+      margin-top: 22px;
+      align-self: center;
+    }
   }
 
   .header__link {

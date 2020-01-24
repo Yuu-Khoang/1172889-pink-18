@@ -11,8 +11,8 @@
 
 .footer__map {
   min-width: 320px;
-  height: 645px;
-  margin-top: -60px;
+  height: 187px;
+  margin-top: -76px;
   display: block;
   position: relative;
   background: url("../img/bg-map-mobile@1x.png") no-repeat top;
@@ -20,8 +20,7 @@
 }
 
 .footer__logo {
-  display: block;
-  margin-bottom: 45px;
+  margin-bottom: 47px;
 }
 
 .footer__public {
@@ -34,7 +33,7 @@
 }
 
 .footer__socials {
-  width: 200px;
+  width: 180px;
   height: 40px;
   margin-top: -5px;
   padding: 0;
@@ -48,41 +47,37 @@
 .footer__account {
   width: 51px;
   height: 51px;
-  border: 3px @bg-light solid;
-  border-radius: 50%;
+  position: relative;
+}
+
+.footer__logo {
+  display: block;
 }
 
 .footer__link {
   display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 3px @bg-light solid;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
 
   &--twitter {
-    width: 26px;
-    height: 35px;
-    display: block;
-    padding: 15px;
-    background: url("../img/icon-twitter.svg") no-repeat;
-    background-position-x: 18px;
-    background-position-y: 16px;
+    background-image: url("../img/icon-twitter.svg");
   }
 
   &--fb {
-    width: 26px;
-    height: 35px;
-    display: block;
-    padding: 15px;
-    background: url("../img/icon-facebook.svg") no-repeat;
-    background-position-x: 20px;
-    background-position-y: 16px;
+    background-image: url("../img/icon-facebook.svg");
   }
 
   &--youtube {
-    width: 26px;
-    height: 35px;
-    display: block;
-    padding: 15px;
-    background: url("../img/icon-youtube.svg") no-repeat;
-    background-position-x: 18px;
-    background-position-y: 18px;
+    background-image: url("../img/icon-youtube.svg");
   }
 }
 
@@ -105,21 +100,22 @@
     align-items: center;
 
     &--index {
-      padding-top: 400px;
+      padding-top: 432px;
     }
   }
 
   .footer__map {
-    height: 350px;
+    height: 395px;
     margin-top: -90px;
     display: block;
     background: url("../img/bg-map-tablet@1x.jpg") no-repeat center;
-    background-position-y: -350px;
+    background-position-y: -325px;
   }
 
   .footer__socials {
     width: 190px;
     margin-top: -5px;
+    margin-left: -15px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -129,17 +125,45 @@
   .footer__account {
     width: 51px;
     height: 51px;
-    border: 3px @bg-light solid;
-    border-radius: 50%;
   }
 
   .footer__developer {
     margin-top: 0;
+    margin-bottom: 27px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .footer__developer {
     font-size: 18px;
+  }
+
+  .footer {
+    .center {
+      padding: 0 9px;
+    }
+  }
+
+  .footer__map {
+    padding-top: 126px;
+  }
+
+  .footer__pink {
+    margin-bottom: 14px;
+  }
+
+  .footer__public {
+    margin-bottom: 0;
+    margin-top: 15px;
+    margin-left: 34px;
+  }
+
+  .footer__logo {
+    margin-bottom: 0;
+  }
+
+  .footer__developer {
+    margin-bottom: 0;
+    margin-top: 4px;
   }
 }

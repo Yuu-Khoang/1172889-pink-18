@@ -53,15 +53,15 @@
         бонусную карту! <span>Пожалуйста, заполните форму ниже:</span></p>
       <form class="form__flex" method="get" action="https://echo.htmlacademy.ru/">
         <div class="form__fullname center">
-          <p class="form__surname">
+          <p class="form__surname form__item">
             <label for="surname">Фамилия:</label>
-            <input type="text" name="surname" id="surname" placeholder="Укажите фамилию*" required>
+            <input type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
           </p>
-          <p class="form__name">
+          <p class="form__name form__item">
             <label for="name">Имя:</label>
-            <input type="text" name="username" id="name" placeholder="Введите ваше имя*" required>
+            <input type="text" name="username" id="name" placeholder="Введите ваше имя *" required>
           </p>
-          <p class="form__middlename">
+          <p class="form__middlename form__item">
             <label for="middlename">Отчество:</label>
             <input type="text" name="middlename" id="middlename" placeholder="Ну и отчество тоже">
           </p>
@@ -111,7 +111,7 @@
           </p>
           <p class="form__email">
             <label for="email">Адрес почты</label>
-            <input type="email" name="email" id="email" placeholder="Введите почту*" required>
+            <input type="email" name="email" id="email" placeholder="Введите почту *" required>
           </p>
         </div>
         <div class="form__wrapper form__wrapper--statistics">
@@ -154,9 +154,12 @@
   <footer class="footer">
     <div class="center">
       <div class="footer__wrapper">
-        <a href="index.html" class="footer__link">
-          <img class="footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Логотип приложения Pink" width="147"
-            height="40">
+        <a class="footer__pink" href="index.html">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-blue-mobile.svg">
+            <img class="footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Логотип приложения Pink" width="147" height="40">
+          </picture>
         </a>
 
         <div class="footer__public">
@@ -180,7 +183,8 @@
         </div>
 
 
-        <p class="footer__developer">Разработано
+        <p class="footer__developer">
+          Разработано
           <a href="https://htmlacademy.ru/intensive/adaptive">
             <img src="img/logo-htmlacademy.svg"
               alt="Логотип HTML Академии в виде квадратной академической шапочки на фоне белого щита">
