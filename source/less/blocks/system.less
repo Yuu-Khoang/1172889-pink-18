@@ -24,6 +24,15 @@
   border: 3px @white solid;
   border-radius: 50px;
   text-decoration: none;
+
+  &:hover {
+    color: @color-contrast;
+    background-color: @white;
+  }
+
+  &:active {
+    color: @color-contrast-opacity;
+  }
 }
 
 .system__description {
@@ -82,7 +91,7 @@
   .system__list {
     width: 245px;
     padding: 0 25px;
-    margin-top: 46px;
+    margin-top: 44px;
     margin-bottom: 40px;
   }
 
