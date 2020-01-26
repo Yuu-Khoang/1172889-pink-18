@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Конкурс фотоприложения Pink</title>
-  <link type="text/css" href="css/style.css" rel="stylesheet">
+  <link type="text/css" href="css/style.min.css" rel="stylesheet">
 </head>
 
 
@@ -54,11 +54,11 @@
         <div class="form__fullname center">
           <p class="form__surname form__item">
             <label for="surname">Фамилия:</label>
-            <input type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required>
+            <input type="text" name="surname" id="surname" placeholder="Укажите фамилию *" required="">
           </p>
           <p class="form__name form__item">
             <label for="name">Имя:</label>
-            <input type="text" name="username" id="name" placeholder="Введите ваше имя *" required>
+            <input type="text" name="username" id="name" placeholder="Введите ваше имя *" required="">
           </p>
           <p class="form__middlename form__item">
             <label for="middlename">Отчество:</label>
@@ -70,33 +70,27 @@
             <p class="form__title">Ваши безбашенные достижения&nbsp;в&nbsp;путешествии</p>
             <ul class="form__achievements">
               <li class="form__progress form__progress--shark">
-                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="selfi-shark"
-                  value="selfi-shark" checked>
+                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="selfi-shark" value="selfi-shark" checked="">
                 <label for="selfi-shark">Сделал селфи с акулой</label>
               </li>
               <li class="form__progress form__progress--sunburned">
-                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="sunburned"
-                  value="sunburned-beach" checked>
+                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="sunburned" value="sunburned-beach" checked="">
                 <label for="sunburned">Обгорел на пляже</label>
               </li>
               <li class="form__progress form__progress--norris">
-                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="norris"
-                  value="saw-norris">
+                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="norris" value="saw-norris">
                 <label for="norris">Видел Чака Норриса</label>
               </li>
               <li class="form__progress form__progress--souvenirs">
-                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="souvenirs"
-                  value="bought-souvenirs">
+                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="souvenirs" value="bought-souvenirs">
                 <label for="souvenirs">Накупил сувениров</label>
               </li>
               <li class="form__progress">
-                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="tower"
-                  value="held-tower" checked>
+                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="tower" value="held-tower" checked="">
                 <label for="tower">Удержал башню</label>
               </li>
               <li class="form__progress form__progress--hotel">
-                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="hotel"
-                  value="destroyed-hotel">
+                <input class="visually-hidden form__checkbox" type="checkbox" name="achievements" id="hotel" value="destroyed-hotel">
                 <label for="hotel">Разгромил отель</label>
               </li>
             </ul>
@@ -110,7 +104,7 @@
           </p>
           <p class="form__email">
             <label for="email">Адрес почты</label>
-            <input type="email" name="email" id="email" placeholder="Введите почту *" required>
+            <input type="email" name="email" id="email" placeholder="Введите почту *" required="">
           </p>
         </div>
         <div class="form__wrapper form__wrapper--statistics">
@@ -118,18 +112,15 @@
             <p class="form__title">С каким приложением путешествовали?</p>
             <ul class="form__statistics">
               <li class="form__apps">
-                <input class="visually-hidden form__radio" type="radio" name="system-statistics" id="pink-ios"
-                  value="ios" checked>
+                <input class="visually-hidden form__radio" type="radio" name="system-statistics" id="pink-ios" value="ios" checked="">
                 <label for="pink-ios">Pink для iOS</label>
               </li>
               <li class="form__apps">
-                <input class="visually-hidden form__radio" type="radio" name="system-statistics" id="pink-android"
-                  value="android">
+                <input class="visually-hidden form__radio" type="radio" name="system-statistics" id="pink-android" value="android">
                 <label for="pink-android">Pink на Android</label>
               </li>
               <li class="form__apps">
-                <input class="visually-hidden form__radio" type="radio" name="system-statistics" id="pink-windows-phone"
-                  value="windows-phone">
+                <input class="visually-hidden form__radio" type="radio" name="system-statistics" id="pink-windows-phone" value="windows-phone">
                 <label for="pink-windows-phone">Windows Phone</label>
               </li>
             </ul>
@@ -184,8 +175,7 @@
         <p class="footer__developer">
           Разработано
           <a href="https://htmlacademy.ru/intensive/adaptive">
-            <img src="img/logo-htmlacademy.svg"
-              alt="Логотип HTML Академии в виде квадратной академической шапочки на фоне белого щита">
+            <img src="img/logo-htmlacademy.svg" alt="Логотип HTML Академии в виде квадратной академической шапочки на фоне белого щита">
             <span class="visually-hidden">htmlacademy.ru</span>
           </a>
         </p>
@@ -206,6 +196,10 @@
     <p class="popup__text">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим
       ее&nbsp;и оповестим&nbsp;вас.</p>
         <button class="popup__button popup__button--wider popup__button--background">Закрыть окно</button>
+  </div>
+
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
   </div>
 </body>
 
