@@ -1,22 +1,152 @@
+.popup {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+
+  &--true {
+    margin-top: 100px;
+  }
+}
+
 .popup__header {
   font-size: 18px;
+  text-align: center;
   font-weight: 700;
   line-height: 24px;
   color: @black;
 }
 
 .popup__text {
+  padding-top: 5px;
   font-size: 14px;
+  text-align: center;
   line-height: 24px;
   color: @color-subtext;
 }
 
 .popup__button {
+  width: 279px;
+  height: 62px;
+  position: relative;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 18px;
+  text-align: center;
   font-weight: 700;
   text-transform: uppercase;
-  border: 2px #2aab6d solid;
-  border-radius: 2px;
-  background-color: #2aab6d;
   color: @white;
+  border: 2px #2aab6d solid;
+  border-radius: 3px;
+  background-color: #2aab6d;
+
+  &--background {
+    margin-top: 70px;
+
+    &::after {
+      width: 320px;
+      height: 163px;
+      margin: 0;
+      padding: 0;
+      top: -50px;
+      left: -22px;
+      display: block;
+      position: absolute;
+      background-color: @border-gray;
+      content: "";
+      z-index: -1;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .popup {
+    width: 460px;
+    padding-top: 10px;
+  }
+
+  .popup__header {
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .popup__text {
+    padding-left: 40px;
+    padding-right: 40px;
+    font-size: 18px;
+  }
+
+  .popup__button {
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 60px;
+
+    &--background {
+      margin-top: 65px;
+
+      &::after {
+        width: 460px;
+        left: -82px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .popup {
+    width: 780px;
+  }
+
+  .popup__header {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .popup__text {
+    padding-left: 170px;
+    padding-right: 170px;
+    font-size: 18px;
+  }
+
+  .popup__button {
+    width: 300px;
+    margin-top: 90px;
+    margin-left: 220px;
+
+    &--background {
+      &::after {
+        display: none;
+      }
+    }
+
+    &::after {
+      width: 780px;
+      height: 163px;
+      margin: 0;
+      padding: 0;
+      top: -52px;
+      left: -242px;
+      display: block;
+      position: absolute;
+      background-color: @border-gray;
+      content: "";
+      z-index: -1;
+    }
+
+    &--wider {
+      width: 460px;
+      margin-top: 70px;
+      margin-left: 141px;
+
+      &::after {
+        left: -162px;
+      }
+    }
+  }
 }

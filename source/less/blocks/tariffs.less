@@ -1,6 +1,6 @@
 .tariffs {
-  padding-top: 20px;
-  padding-bottom: 45px;
+  padding-top: 21px;
+  padding-bottom: 47px;
   background-color: @bg-light;
 }
 
@@ -19,16 +19,32 @@
 
 .tariffs__list {
   padding: 0;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
   list-style-type: none;
 }
 
 .tariffs__item {
   width: 280px;
+  position: relative;
+  overflow: hidden;
+
+  &--standart::before {
+    width: 100px;
+    height: 19px;
+    display: block;
+    position: absolute;
+    background-color: @color-contrast;
+    transform: rotate(-45deg) translate(-26px, -8px);
+    color: @white;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 6px;
+    content: "ХИТ";
+  }
 }
 
 .tariffs__title {
-  height: 94px;
+  height: 98px;
   margin: 0 auto;
   padding: 0;
   text-align: center;
@@ -43,7 +59,7 @@
 
 .tariffs__name {
   margin: 0;
-  padding-top: 25px;
+  padding-top: 26px;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
@@ -52,7 +68,7 @@
 
 .tariffs__price {
   margin: 0;
-  padding-top: 20px;
+  padding-top: 22px;
   font-size: 24px;
   font-weight: 300;
   text-transform: uppercase;
@@ -69,7 +85,7 @@
 }
 
 .tariffs__attribute {
-  padding: 18px 22px;
+  padding: 16px 22px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -108,6 +124,10 @@
 
   .tariffs__item {
     width: 155px;
+
+    &--standart::before {
+      transform: rotate(-45deg) translate(-20px, -14px);
+    }
   }
 
   .tariffs__fulloption {
@@ -126,10 +146,11 @@
 
   .tariffs__name {
     font-size: 16px;
+    padding-top: 22px;
   }
 
   .tariffs__price {
-    padding-top: 15px;
+    padding-top: 17px;
     padding-bottom: 20px;
     font-size: 18px;
   }
@@ -157,16 +178,21 @@
 @media (min-width: @desktop-width) {
   .tariffs {
     padding-top: 40px;
-    padding-bottom: 90px;
+    padding-bottom: 98px;
   }
 
   .tariffs__item {
     width: 236px;
+
+    &--standart::before {
+      transform: rotate(-45deg) translate(-24px, -7px);
+    }
   }
 
   .tariffs__name {
     font-size: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    padding-top: 27px;
   }
 
   .tariffs__price {
@@ -182,6 +208,8 @@
   .tariffs__attribute {
     padding: 17px;
     font-size: 18px;
+    padding-bottom: 14px;
+    padding-left: 23px;
 
     &--name {
       padding-top: 14px;

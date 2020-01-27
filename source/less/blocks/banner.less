@@ -1,5 +1,11 @@
 .banner {
   background: #2c394a url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
+  background-size: cover;
+
+  @media (min-resolution: @retina-dppx) {
+    background-image: url("../img/bg-back-mobile@2x.jpg");
+    background-size: 640px auto;
+  }
 }
 
 .banner__slogan {
@@ -18,18 +24,19 @@
     margin-bottom: 0;
     padding-top: 10px;
     padding-bottom: 53px;
-    line-height: 30px;
+    line-height: 29px;
   }
 
   &--gallery {
     margin-bottom: 0;
     padding-top: 10px;
-    padding-bottom: 83px;
+    padding-bottom: 80px;
     line-height: 30px;
   }
 
   &--main {
     line-height: 29px;
+    margin-top: 22px;
   }
 }
 
@@ -41,10 +48,16 @@
 @media (min-width: @tablet-width) {
   .banner {
     height: 695px;
-    background: url("../img/bg-back-tablet@1x.jpg") no-repeat center top;
+    background: #2c394a url("../img/bg-back-tablet@1x.jpg") no-repeat center top;
+    background-size: cover;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-tablet@2x.jpg");
+      background-size: 2400px auto;
+    }
 
     &--main {
-      height: 729px;
+      height: 984px;
     }
   }
 
@@ -65,13 +78,22 @@
       width: 360px;
       margin-bottom: 25px;
       padding-bottom: 110px;
+      margin-top: 61px;
     }
 
     &--main {
       width: 200px;
       margin-left: 50px;
       font-size: 40px;
-      line-height: 46px;
+      line-height: 47px;
+      margin-top: 93px;
+      margin-bottom: 32px;
+    }
+
+    &--competition {
+      margin-top: 60px;
+      line-height: 60px;
+      margin-bottom: 0;
     }
   }
 
@@ -89,10 +111,16 @@
 @media (min-width: @desktop-width) {
   .banner {
     height: 395px;
+    background-image: url("../img/bg-back-desktop@1x.jpg");
+    background-size: cover;
+
+    @media (min-resolution: @retina-dppx) {
+      background-image: url("../img/bg-back-desktop@2x.jpg");
+      background-size: 5120px auto;
+    }
 
     &--main {
       height: 853px;
-      background-image: url("../img/bg-back-desktop@1x.jpg");
     }
   }
 
