@@ -15,7 +15,7 @@
   margin-top: -76px;
   display: block;
   position: relative;
-  background: url("../img/bg-map-mobile@1x.png") no-repeat top;
+  background: url("../img/bg-map-mobile@1x.jpg") no-repeat top;
   background-position-y: -440px;
   z-index: -1;
 
@@ -71,16 +71,25 @@
   background-repeat: no-repeat;
   background-position: center;
 
-  &--twitter {
-    background-image: url("../img/sprite.svg#icon-twitter");
+  &:hover {
+    border: 3px @color-subtext solid;
   }
 
-  &--fb {
-    background-image: url("../img/sprite.svg#icon-facebook");
+  &:active {
+    border: 3px rgba(0, 0, 0, 0.1) solid;
   }
 
-  &--youtube {
-    background-image: url("../img/sprite.svg#icon-youtube");
+  svg {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    fill: @color-contrast;
+
+    &:active {
+      fill: @color-contrast-opacity;
+    }
   }
 }
 

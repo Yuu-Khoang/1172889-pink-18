@@ -6,10 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Главная страница фотоприложения Pink</title>
   <link type="text/css" href="css/style.min.css" rel="stylesheet">
+  <script>
+    document.createElement('picture');
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 
 
 <body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <section class="banner banner--main">
     <header class="header header--active">
       <div class="header__wrap">
@@ -47,6 +55,9 @@
       <h1 class="visually-hidden">Pink - фотоприложение для раскрашивания серых будней</h1>
       <h2 class="banner__slogan banner__slogan--main">Взгляните на&nbsp;жизнь иначе!</h2>
       <picture>
+        <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.webp 1x, img/iphone-hand-desktop@2x.webp 2x" type="image/webp">
+        <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.webp 1x, img/iphone-hand-tablet@2x.webp 2x" type="image/webp">
+        <source srcset="img/iphone-hand-mobile@1x.webp 1x, img/iphone-hand-mobile@2x.webp 2x" type="image/webp">
         <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png">
         <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png">
         <img class="banner__overlay" src="img/iphone-hand-mobile@1x.png" alt="Телефон с фотографией из приложения Pink" width="258" height="286">
@@ -98,12 +109,17 @@
           </ul>
           <div class="advantages__images">
             <picture>
+              <source srcset="img/iphone-screen-1-desktop@1x.webp 1x, img/iphone-screen-1-desktop@2x.webp 2x" type="image/webp">
               <img class="advantages__image advantages__image--first" src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x" alt="Фотография мусорных баков в серых тонах" width="292" height="302">
             </picture>
             <picture>
+              <source srcset="img/iphone-screen-2-desktop@1x.webp 1x, img/iphone-screen-2-desktop@2x.webp 2x" type="image/webp">
               <img class="advantages__image advantages__image--second" src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x" alt="Фотография мусорных баков с розовым фильтром" width="292" height="302">
             </picture>
             <picture>
+              <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x" type="image/webp">
+              <source srcset="img/iphone-screen-3-mobile@1x.webp 1x, img/iphone-screen-3-mobile@2x.webp 2x" type="image/webp">
               <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
               <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
               <img class="advantages__image advantages__image--third" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Смайлик в приложении Pink на фоне яркой розовой фотографии" width="157" height="320">
@@ -246,16 +262,19 @@
             <li class="footer__account">
               <a href="https://vk.com/" class="footer__link footer__link--twitter">
                 <span class="visually-hidden">Страница Pink в Твиттере</span>
+                <svg><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
               </a>
             </li>
             <li class="footer__account">
               <a href="https://facebook.com/" class="footer__link footer__link--fb">
                 <span class="visually-hidden">Страница Pink в Фейсбуке</span>
+                <svg><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
               </a>
             </li>
             <li class="footer__account">
               <a href="https://instagram.com/" class="footer__link footer__link--youtube">
                 <span class="visually-hidden">Страница Pink на Ютубе</span>
+                <svg><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
               </a>
             </li>
           </ul>
@@ -273,9 +292,8 @@
     </div>
   </footer>
 
-  <div style="display: none;">
-    <include src="build/img/sprite.svg"></include>
-  </div>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
 
   <!--   <script>
     var navMain = document.querySelector('.header__nav');

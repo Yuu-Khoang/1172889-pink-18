@@ -6,10 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Конкурс фотоприложения Pink</title>
   <link type="text/css" href="css/style.min.css" rel="stylesheet">
+  <script>
+    document.createElement('picture');
+  </script>
+  <script src="js/picturefill.min.js" async></script>
 </head>
 
 
 <body>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+
   <section class="banner">
     <header class="header header--active">
       <div class="header__wrap">
@@ -156,16 +164,19 @@
             <li class="footer__account">
               <a href="https://vk.com/" class="footer__link footer__link--twitter">
                 <span class="visually-hidden">Страница Pink в Твиттере</span>
+                <svg><use xlink:href="img/sprite.svg#icon-twitter"></use></svg>
               </a>
             </li>
             <li class="footer__account">
               <a href="https://facebook.com/" class="footer__link footer__link--fb">
                 <span class="visually-hidden">Страница Pink в Фейсбуке</span>
+                <svg><use xlink:href="img/sprite.svg#icon-facebook"></use></svg>
               </a>
             </li>
             <li class="footer__account">
               <a href="https://instagram.com/" class="footer__link footer__link--youtube">
                 <span class="visually-hidden">Страница Pink на Ютубе</span>
+                <svg><use xlink:href="img/sprite.svg#icon-youtube"></use></svg>
               </a>
             </li>
           </ul>
@@ -198,9 +209,9 @@
         <button class="popup__button popup__button--wider popup__button--background">Закрыть окно</button>
   </div>
 
-  <div style="display: none;">
-    <include src="build/img/sprite.svg"></include>
-  </div>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
+
 </body>
 
 </html>
