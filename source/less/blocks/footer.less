@@ -15,7 +15,7 @@
   margin-top: -76px;
   display: block;
   position: relative;
-  background: url("../img/bg-map-mobile@1x.jpg") no-repeat top;
+  background: url("../img/bg-map-mobile@1x.png") no-repeat top;
   background-position-y: -440px;
   z-index: -1;
 
@@ -80,11 +80,10 @@
   }
 
   svg {
-    width: 24px;
-    height: 24px;
     position: absolute;
-    top: 15px;
-    left: 15px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     fill: @color-contrast;
 
     &:active {
@@ -98,9 +97,21 @@
   line-height: 18px;
   color: @color-subtext;
 
-  img {
-    padding-left: 12px;
+  svg {
+    padding-left: 10px;
     vertical-align: middle;
+    left: 50%;
+    top: 50%;
+    transform: translate(-5%, -10%);
+    fill: @color-contrast;
+
+    &:hover {
+      fill: @color-subtext;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -146,7 +157,11 @@
 
   .footer__developer {
     margin-top: 0;
-    margin-bottom: 27px;
+    margin-bottom: 22px;
+
+    svg {
+      transform: translate(-5%, 5%);
+    }
   }
 }
 
