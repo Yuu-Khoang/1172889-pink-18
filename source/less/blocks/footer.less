@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 40px;
 
   &--index {
     display: none;
@@ -166,8 +167,12 @@
 }
 
 @media (min-width: @desktop-width) {
-  .footer__wrapper--index {
-    padding-top: 458px;
+  .footer__wrapper {
+    padding-bottom: 72px;
+
+    &--index {
+      padding-top: 458px;
+    }
   }
 
   .footer__developer {

@@ -141,7 +141,23 @@
   color: @white;
   text-decoration: none;
 
+  &:hover {
+    color: @color-contrast;
+  }
+
+  &:active {
+    color: @color-contrast-opacity;
+  }
+
   &--underline {
+    &:hover {
+      color: @white;
+    }
+
+    &:active {
+      color: @white;
+    }
+
     &::after {
       width: 100%;
       display: block;
@@ -149,14 +165,6 @@
       border: 0;
       content: "";
     }
-  }
-
-  &:hover {
-    color: @color-contrast;
-  }
-
-  &:active {
-    color: fade(@color-contrast, 30%);
   }
 }
 

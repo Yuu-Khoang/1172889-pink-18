@@ -48,7 +48,7 @@
       border: @color-subtext 2px solid;
     }
 
-    &:active {
+    &:focus {
       border: @color-contrast 2px solid;
     }
   }
@@ -191,6 +191,14 @@
     border: @border-gray 2px solid;
     border-radius: 3px;
     resize: none;
+
+    &:hover {
+      border: @color-subtext 2px solid;
+    }
+
+    &:focus {
+      border: @color-contrast 2px solid;
+    }
   }
 }
 
@@ -401,7 +409,7 @@
 
       &::after {
         width: 60px;
-        height: 60px;
+        height: 59px;
         display: inline-block;
         position: absolute;
         right: 58px;
