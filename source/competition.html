@@ -19,6 +19,8 @@
   </div>
 
   <!-- Для скрытия меню убрать класс: banner--menu_active -->
+  <!-- Для отображения кнопок закрытия/открытия меню убрать класс: header__toggle--nojs -->
+  <!-- Смена кнопок с открытой на закрытую зависит от наличия класса banner--menu_active: если он есть, то появляется крестик. Если класс отсутствует, то появляются полосы. -->
   <section class="banner banner--menu_active">
     <header class="header">
       <div class="header__wrap">
@@ -30,7 +32,7 @@
               <img class="header__logo-img" src="img/logo-pink-white-mobile.svg" alt="Логотип приложения Pink" width="75" height="22">
             </picture>
           </a>
-          <button class="header__toggle" type="button"><span class="visually-hidden">Меню</span></button>
+          <button class="header__toggle header__toggle--nojs" type="button"><span class="visually-hidden">Меню</span></button>
         </div>
         <nav class="header__nav header__nav--nojs">
           <ul class="header__menu">
@@ -137,7 +139,7 @@
         </div>
         <div class="form__text center">
           <p class="form__title">Опишите свои эмоции</p>
-          <label for="form-textarea" class="visually-hidden">Текст</label>
+          <label for="form-textarea"><span class="visually-hidden">Текст</span></label>
           <textarea name="form-textarea" id="form-textarea" placeholder="Можно прям в красках, не стесняясь в выражениях" rows="5"></textarea>
         </div>
 

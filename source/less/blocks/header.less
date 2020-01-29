@@ -33,7 +33,6 @@
 }
 
 .header__toggle {
-  display: none;
   width: 50px;
   height: 24px;
   margin-left: auto;
@@ -44,6 +43,10 @@
   padding: 0;
   border-top: 4px solid @white;
   border-bottom: 4px solid @white;
+
+  &--nojs {
+    display: none;
+  }
 
   &:hover {
     border-color: @color-contrast;
