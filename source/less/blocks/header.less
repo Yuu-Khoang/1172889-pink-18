@@ -74,6 +74,41 @@
     background-color: @white;
     content: "";
   }
+
+  &--close {
+    border: none;
+    margin-right: 1px;
+    margin-top: 3px;
+
+    &::before,
+    &::after {
+      width: 29px;
+      height: 3px;
+      position: absolute;
+      top: 40%;
+      left: 80%;
+      background-color: @white;
+      content: "";
+    }
+
+    &::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      background-color: @color-contrast;
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: @color-contrast-opacity;
+    }
+  }
 }
 
 .header__wrapper {
