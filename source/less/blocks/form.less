@@ -131,6 +131,7 @@
 
 .form__apps {
   margin-bottom: 38px;
+  position: relative;
 }
 
 .form__radio + label::before {
@@ -154,8 +155,8 @@
   width: 11px;
   height: 11px;
   position: absolute;
-  left: 32px;
-  margin-top: 10px;
+  left: 12px;
+  top: 11px;
   background: @color-contrast no-repeat center;
   border: @color-contrast 2px solid;
   border-radius: 50%;
@@ -181,6 +182,7 @@
   }
 
   textarea {
+    overflow: hidden;
     width: 255px;
     min-height: 180px;
     margin-bottom: 40px;
@@ -332,27 +334,15 @@
     margin-right: 20px;
   }
 
-  .form__radio:checked + label::after {
-    left: 72px;
-    margin-top: 11px;
-  }
-
   .form__checkbox + label::before {
     margin-right: 20px;
   }
 
   .form__phone {
+    position: relative;
+
     &::after {
       background: url("../img/icon-phone.svg") no-repeat center;
-    }
-  }
-
-  .form__email {
-    padding-top: 30px;
-    padding-bottom: 10px;
-
-    &::after {
-      background: url("../img/icon-mail.svg") no-repeat center;
     }
   }
 
@@ -397,6 +387,7 @@
       display: flex;
       flex-direction: column;
       margin: 0 auto;
+      position: relative;
 
       input {
         width: 100%;
@@ -409,12 +400,25 @@
 
       &::after {
         width: 60px;
-        height: 59px;
+        height: 55px;
         display: inline-block;
         position: absolute;
-        right: 58px;
+        right: 2px;
+        top: 2px;
         background-color: @border-gray;
         content: "";
+      }
+    }
+
+    .form__email {
+      padding-top: 30px;
+      padding-bottom: 10px;
+
+      &::after {
+        background-image: url("../img/icon-mail.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        top: 32px;
       }
     }
   }
@@ -559,8 +563,8 @@
       padding-top: 0;
 
       &::after {
-        left: 815px;
-        right: 0;
+        top: 2px;
+        right: 69px;
       }
     }
 
@@ -569,8 +573,7 @@
       margin-right: 8px;
 
       &::after {
-        left: 370px;
-        right: 0;
+        right: 69px;
       }
     }
   }
@@ -628,10 +631,6 @@
 
   .form__statistics {
     padding-left: 55px;
-  }
-
-  .form__radio:checked + label::after {
-    left: 86px;
   }
 
   .form__btn {

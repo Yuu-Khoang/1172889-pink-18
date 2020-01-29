@@ -1,10 +1,61 @@
 .banner {
   background: #2c394a url("../img/bg-back-mobile@1x.jpg") no-repeat center top;
-  background-size: cover;
+  background-size: 100% auto;
 
   @media (min-resolution: @retina-dppx) {
     background-image: url("../img/bg-back-mobile@2x.jpg");
-    background-size: 640px auto;
+  }
+
+  &--menu_active {
+    background-position: center 250px;
+
+    .banner--main {
+      background-position: center;
+      background-size: 100% auto;
+    }
+
+    .header {
+      background-color: @bg-dark;
+
+      .header__toggle {
+        border: none;
+        margin-right: 1px;
+        margin-top: 3px;
+
+        &::before,
+        &::after {
+          width: 29px;
+          height: 3px;
+          position: absolute;
+          top: 40%;
+          left: 80%;
+          background-color: @white;
+          content: "";
+        }
+
+        &::before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        &::after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+
+        &:hover::before,
+        &:hover::after {
+          background-color: @color-contrast;
+        }
+
+        &:active::before,
+        &:active::after {
+          background-color: @color-contrast-opacity;
+        }
+      }
+    }
+
+    .header__nav {
+      display: block;
+    }
   }
 }
 
@@ -47,17 +98,27 @@
 
 @media (min-width: @tablet-width) {
   .banner {
-    height: 695px;
+    height: 435px;
     background: #2c394a url("../img/bg-back-tablet@1x.jpg") no-repeat center top;
-    background-size: cover;
+    background-size: 1200px auto;
+    overflow: hidden;
 
     @media (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-tablet@2x.jpg");
-      background-size: 2400px auto;
+      background-size: 100% auto;
     }
 
     &--main {
-      height: 984px;
+      height: 729px;
+    }
+
+    &--menu_active {
+      height: 687px;
+      background-position: center 250px;
+
+      &.banner--main {
+        height: 984px;
+      }
     }
   }
 
@@ -113,10 +174,23 @@
     height: 395px;
     background-image: url("../img/bg-back-desktop@1x.jpg");
     background-size: cover;
+    overflow-x: hidden;
 
     @media (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-back-desktop@2x.jpg");
-      background-size: 5120px auto;
+    }
+
+    &--menu_active {
+      height: 395px;
+      background-position: center top;
+
+      &.banner--main {
+        height: 853px;
+      }
+
+      .header {
+        background-color: @black-opacity;
+      }
     }
 
     &--main {

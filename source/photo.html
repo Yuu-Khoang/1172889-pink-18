@@ -18,9 +18,9 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <section class="banner">
+  <!-- Для скрытия меню убрать класс: banner--menu_active -->
+  <section class="banner banner--menu_active">
     <header class="header">
-      <!-- Для открытия меню класс: header--active -->
       <div class="header__wrap">
         <div class="center  header__wrapper">
           <a class="header__logo" href="index.html">
@@ -45,7 +45,7 @@
               <a class="header__link" href="competition.html">Конкурс</a>
             </li>
             <li class="header__page">
-              <a class="header__link" href="https://htmlacademy.ru/">Html academy</a>
+              <a class="header__link" href="https://htmlacademy.ru/">Html Academy</a>
             </li>
           </ul>
         </nav>
@@ -71,7 +71,7 @@
         <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
         <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
         <img class="gallery__image gallery__image--panorama" src="img/panorama-mobile@1x.jpg"
-          srcset="img/panorama-mobile@2x.jpg 2x" alt="Вид сверху на пейзаж" width="100%" height="137">
+          srcset="img/panorama-mobile@2x.jpg 2x" alt="Вид сверху на пейзаж" width="100" height="137">
       </picture>
 
       <div class="center">
@@ -182,7 +182,7 @@
               <source media="(min-width: 660px)"
                 srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
               <img class="gallery__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x"
-                lt="Ноги в коричневых ботинках на фоне камней и гор" width="280" height="180">
+                alt="Ноги в коричневых ботинках на фоне камней и гор" width="280" height="180">
             </picture>
             <p class="gallery__user">Максим</p>
             <p class="gallery__time">(40 часов назад)</p>
@@ -219,7 +219,7 @@
     </section>
 
 
-    <section class="photo-editor">
+    <form class="photo-editor">
       <picture>
         <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x"
           type="image/webp">
@@ -273,7 +273,7 @@
           <button class="photo-editor__button photo-editor__button--cancel" type="reset">Отмена</button>
         </div>
       </div>
-    </section>
+    </form>
   </main>
 
   <footer class="footer">

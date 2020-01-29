@@ -18,8 +18,9 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <section class="banner banner--main">
-    <header class="header"> <!-- Для открытия меню класс: header--active -->
+  <!-- Для скрытия меню убрать класс: banner--menu_active -->
+  <section class="banner banner--main banner--menu_active">
+    <header class="header">
       <div class="header__wrap">
         <div class="center header__wrapper">
           <a class="header__logo">
@@ -84,7 +85,7 @@
     <section class="advantages">
       <h2 class="advantages__header">
         <span>Устали от&nbsp;серости мегаполиса?</span>
-        <span>Нам есть, что&nbsp;вам предложить!</span>
+        <span class="advantages__span">Нам есть, что&nbsp;вам предложить!</span>
       </h2>
 
       <div class="center">
@@ -119,7 +120,7 @@
             <picture>
               <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.webp 1x, img/iphone-screen-3-desktop@2x.webp 2x" type="image/webp">
               <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.webp 1x, img/iphone-screen-3-tablet@2x.webp 2x" type="image/webp">
-              <source srcset="img/iphone-screen-3-mobile@1x.webp 1x, img/iphone-screen-3-mobile@2x.webp 2x" type="image/webp">
+              <source srcset="img/iphone-screen-mobile@1x.webp 1x, img/iphone-screen-mobile@2x.webp 2x" type="image/webp">
               <source media="(min-width: 960px)" srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
               <source media="(min-width: 660px)" srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
               <img class="advantages__image advantages__image--third" src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" alt="Смайлик в приложении Pink на фоне яркой розовой фотографии" width="157" height="320">
@@ -245,7 +246,10 @@
     </section>
   </main>
 
-  <footer class="footer footer__map">
+  <footer class="footer footer--map">
+    <div class="footer__map">
+      <div class="footer__google-map" id="map"></div>
+    </div>
 
     <div class="center">
       <div class="footer__wrapper footer__wrapper--index">
@@ -295,23 +299,8 @@
   <script src="js/svg4everybody.min.js"></script>
   <script>svg4everybody();</script>
 
-  <!--   <script>
-    var navMain = document.querySelector('.header__nav');
-    var navToggle = document.querySelector('.header__toggle');
-
-    navMain.classList.remove('header__nav--nojs');
-
-    navToggle.addEventListener('click', function () {
-      if (navMain.classList.contains('header__nav--closed')) {
-        navMain.classList.remove('header__nav--closed');
-        navMain.classList.add('header__nav--opened');
-      } else {
-        navMain.classList.add('header__nav--closed');
-        navMain.classList.remove('header__nav--opened');
-      }
-    });
-  </script> -->
-
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyDluwBfvy_M346vmyhvVLD62kK76nnVtss"></script>
+  <script src="js/map.js"></script>
 </body>
 
 </html>
